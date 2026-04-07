@@ -1,0 +1,476 @@
+/* Wedding Card – Static, animated, Islamic aesthetic */
+:root{
+  --bg0:#050a07;
+  --bg1:#07150f;
+  --ink:#fff9ef;
+  --gold:#f6d77b;
+  --green0:#06110c;
+  --green1:#0a2b1d;
+  --green2:#0f4a31;
+  --green3:#1b6a45;
+  --mint:#44ffd2;
+  --royalBlue:#2f63ff;
+  --royalViolet:#9b6bff;
+  --sapphire:#16c6ff;
+  --ruby:#ff2e78;
+  --blush:#ff7bd4;
+  --pearl:#fff3e3;
+  --sunrise:#ffcf4a;
+  --neonLime:#b7ff4a;
+  --allahHalo: clamp(220px, 54vw, 300px);
+  --radius:26px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  color:var(--ink);
+  background:
+    radial-gradient(1200px 600px at 20% 10%, rgba(255,207,74,.18), transparent 55%),
+    radial-gradient(900px 520px at 78% 18%, rgba(68,255,210,.18), transparent 60%),
+    radial-gradient(900px 520px at 88% 10%, rgba(47,99,255,.16), transparent 60%),
+    radial-gradient(820px 520px at 12% 46%, rgba(155,107,255,.16), transparent 62%),
+    radial-gradient(820px 520px at 35% 12%, rgba(255,123,212,.16), transparent 62%),
+    radial-gradient(760px 560px at 60% 95%, rgba(183,255,74,.10), transparent 64%),
+    radial-gradient(900px 900px at 50% 100%, rgba(27,106,69,.52), transparent 62%),
+    radial-gradient(900px 700px at 20% 100%, rgba(15,74,49,.46), transparent 60%),
+    linear-gradient(180deg, var(--green1), var(--bg0));
+  font-family: "Cormorant Garamond", ui-serif, Georgia, "Times New Roman", serif;
+  overflow-x:hidden;
+  position:relative;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:-18%;
+  background:
+    radial-gradient(700px 520px at 20% 25%, rgba(68,255,210,.18), transparent 62%),
+    radial-gradient(820px 620px at 78% 30%, rgba(255,207,74,.16), transparent 60%),
+    radial-gradient(760px 560px at 86% 16%, rgba(47,99,255,.20), transparent 62%),
+    radial-gradient(720px 540px at 12% 46%, rgba(155,107,255,.18), transparent 62%),
+    radial-gradient(740px 540px at 40% 18%, rgba(255,123,212,.18), transparent 62%),
+    radial-gradient(900px 700px at 55% 80%, rgba(27,106,69,.24), transparent 64%),
+    conic-gradient(from 220deg,
+      rgba(68,255,210,.08),
+      rgba(255,207,74,.07),
+      rgba(47,99,255,.08),
+      rgba(155,107,255,.08),
+      rgba(255,123,212,.07),
+      rgba(27,106,69,.10),
+      rgba(255,207,74,.06),
+      rgba(68,255,210,.08));
+  filter: blur(32px) saturate(1.55) contrast(1.05);
+  opacity:.78;
+  mix-blend-mode: screen;
+  pointer-events:none;
+  z-index:-1;
+  animation: auroraDrift 18s ease-in-out infinite alternate;
+}
+
+@keyframes auroraDrift{
+  0%{transform: translate3d(-1.5%, -1%, 0) rotate(-2deg)}
+  100%{transform: translate3d(1.5%, 1%, 0) rotate(2deg)}
+}
+
+.app{min-height:100%;display:flex;flex-direction:column}
+
+.topbar{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  padding:14px 18px;
+  backdrop-filter: blur(14px);
+  background:
+    radial-gradient(900px 180px at 18% 0%, rgba(47,99,255,.16), transparent 60%),
+    radial-gradient(900px 180px at 82% 0%, rgba(155,107,255,.16), transparent 60%),
+    radial-gradient(900px 180px at 50% 0%, rgba(255,123,212,.12), transparent 62%),
+    linear-gradient(180deg, rgba(5,10,7,.84), rgba(5,10,7,.55));
+  border-bottom:1px solid rgba(246,215,123,.14);
+}
+.brand{display:flex;flex-direction:column;gap:2px;line-height:1.1}
+.brand .b1{font-family:"Noto Naskh Arabic","Amiri",serif;font-size:18px;color:rgba(246,215,123,.92)}
+.brand .b2{font-family:"Cinzel",serif;font-size:11px;letter-spacing:3.6px;color:rgba(245,241,230,.72);text-transform:uppercase}
+.brand .b1{text-shadow: 0 10px 34px rgba(0,0,0,.35), 0 0 34px rgba(255,177,220,.10)}
+
+.controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.chip{
+  appearance:none;border:1px solid rgba(246,215,123,.28);
+  background:
+    radial-gradient(180px 90px at 20% 0%, rgba(47,99,255,.16), transparent 60%),
+    radial-gradient(180px 90px at 80% 0%, rgba(155,107,255,.16), transparent 60%),
+    radial-gradient(200px 100px at 50% 0%, rgba(255,123,212,.12), transparent 62%),
+    linear-gradient(180deg, rgba(13,44,31,.78), rgba(10,32,23,.78));
+  color:rgba(245,241,230,.92);
+  padding:10px 12px;border-radius:999px;
+  font-family:"Cinzel",serif;font-size:11px;letter-spacing:2.2px;text-transform:uppercase;
+  cursor:pointer;
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  box-shadow: 0 14px 34px rgba(0,0,0,.24);
+}
+.chip:hover{transform: translateY(-1px); border-color: rgba(246,215,123,.42)}
+.chip:active{transform: translateY(0)}
+.chip[aria-pressed="true"]{border-color: rgba(246,215,123,.62); box-shadow: 0 12px 34px rgba(0,0,0,.28), 0 0 0 3px rgba(246,215,123,.08) inset}
+.chip-primary{background: linear-gradient(180deg, rgba(246,215,123,.16), rgba(13,44,31,.78))}
+.chip .urdu{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;font-size:12px;letter-spacing:0;text-transform:none;margin-left:8px}
+
+.audio-gate{
+  position:fixed;
+  left:14px;
+  right:14px;
+  bottom:14px;
+  z-index:80;
+  padding:12px;
+  border-radius:18px;
+  border:1px solid rgba(246,215,123,.22);
+  background:
+    radial-gradient(600px 200px at 30% 0%, rgba(47,99,255,.18), transparent 60%),
+    radial-gradient(600px 200px at 70% 0%, rgba(255,123,212,.16), transparent 60%),
+    linear-gradient(180deg, rgba(5,10,7,.78), rgba(5,10,7,.52));
+  backdrop-filter: blur(16px);
+  box-shadow: 0 24px 70px rgba(0,0,0,.38);
+}
+.audio-gate-btn{
+  width:100%;
+  padding:12px 14px;
+  border-radius:14px;
+  border:1px solid rgba(246,215,123,.28);
+  background:
+    radial-gradient(520px 180px at 30% 0%, rgba(68,255,210,.14), transparent 60%),
+    radial-gradient(520px 180px at 70% 0%, rgba(255,123,212,.14), transparent 60%),
+    linear-gradient(180deg, rgba(27,106,69,.40), rgba(10,32,23,.55));
+  color:rgba(255,249,239,.95);
+  font-family:"Cinzel",serif;
+  font-size:11px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+
+.stage{flex:1;display:flex;align-items:center;justify-content:center;padding:26px 18px 44px}
+.stage{padding: clamp(18px, 4vw, 44px) 18px clamp(32px, 6vw, 54px)}
+
+.card{
+  width:min(980px, 100%);
+  position:relative;
+  border-radius:var(--radius);
+  overflow:hidden;
+  background:
+    radial-gradient(900px 520px at 50% -12%, rgba(68,255,210,.24), transparent 60%),
+    radial-gradient(900px 620px at 50% 118%, rgba(255,207,74,.24), transparent 60%),
+    radial-gradient(980px 600px at 12% 18%, rgba(47,99,255,.22), transparent 62%),
+    radial-gradient(980px 600px at 88% 16%, rgba(155,107,255,.22), transparent 62%),
+    radial-gradient(900px 520px at 50% 22%, rgba(255,123,212,.18), transparent 62%),
+    radial-gradient(820px 520px at 18% 72%, rgba(183,255,74,.12), transparent 62%),
+    linear-gradient(180deg, rgba(24,132,92,.72), rgba(7,18,14,.94));
+  box-shadow:
+    0 46px 140px rgba(0,0,0,.58),
+    0 0 0 1px rgba(246,215,123,.22) inset,
+    0 0 120px rgba(68,255,210,.06);
+}
+.card::before{
+  content:"";
+  position:absolute;inset:-45%;
+  background:
+    conic-gradient(from 120deg,
+      transparent 0 12%,
+      rgba(246,215,123,.16) 12% 14%,
+      transparent 14% 25%,
+      rgba(60,230,179,.10) 25% 27%,
+      transparent 27% 38%,
+      rgba(246,215,123,.14) 38% 40%,
+      transparent 40% 100%);
+  opacity:.95;
+  animation: cardSpin 36s linear infinite;
+  pointer-events:none;
+  filter: blur(.2px);
+}
+.card::after{
+  content:"";
+  position:absolute;inset:0;
+  background:
+    radial-gradient(900px 520px at 20% 0%, rgba(47,99,255,.16), transparent 62%),
+    radial-gradient(900px 520px at 80% 0%, rgba(255,123,212,.16), transparent 62%),
+    radial-gradient(800px 420px at 50% 0%, rgba(246,215,123,.22), transparent 62%),
+    radial-gradient(760px 520px at 50% 110%, rgba(246,215,123,.12), transparent 64%),
+    repeating-linear-gradient(90deg, rgba(246,215,123,.09) 0 1px, transparent 1px 22px),
+    repeating-linear-gradient(0deg, rgba(246,215,123,.08) 0 1px, transparent 1px 22px);
+  opacity:.11;
+  pointer-events:none;
+}
+@keyframes cardSpin{0%{transform: rotate(0deg)}100%{transform: rotate(360deg)}}
+
+.card-border{
+  position:absolute;inset:clamp(12px, 2.6vw, 18px);
+  border-radius:calc(var(--radius) - 10px);
+  border:1px solid rgba(246,215,123,.32);
+  box-shadow: 0 0 0 1px rgba(246,215,123,.10) inset, 0 0 0 10px rgba(5,10,7,.20) inset;
+  pointer-events:none;z-index:5;
+}
+.card-border::before{
+  content:"";
+  position:absolute;inset:clamp(8px, 2vw, 10px);
+  border-radius:calc(var(--radius) - 18px);
+  border:1px solid rgba(246,215,123,.18);
+}
+
+.card-faces{position:relative;z-index:10;display:grid;grid-template-areas:"stack"}
+.card-face{
+  grid-area:stack;
+  padding: clamp(20px, 3.2vw, 28px) clamp(16px, 3vw, 28px) clamp(16px, 2.4vw, 22px);
+  opacity:0;
+  transform: translateY(10px) scale(.992);
+  transition: opacity .55s ease, transform .55s ease, filter .55s ease;
+  filter: saturate(.98) contrast(.98);
+  pointer-events:none;
+}
+.card[data-lang="en"] .face-en,
+.card[data-lang="ur"] .face-ur{
+  opacity:1;transform: translateY(0) scale(1);
+  pointer-events:auto;filter:none;
+}
+
+.content{position:relative;display:flex;flex-direction:column;gap:14px}
+.header{display:flex;align-items:center;justify-content:center;padding-top:2px}
+.arch{width:min(520px, 100%);position:relative}
+.arch svg{width:100%;height:auto;display:block;filter: drop-shadow(0 10px 24px rgba(0,0,0,.45))}
+.arch-text{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px 22px 16px;text-align:center}
+.label-786{font-family:"Cinzel",serif;font-size:12px;letter-spacing:6px;color:rgba(246,215,123,.95);text-shadow: 0 8px 30px rgba(0,0,0,.35)}
+.bismillah{margin-top:8px;font-family:"Noto Naskh Arabic","Amiri",serif;font-size:42px;color:#fff;direction:rtl;line-height:1.25;text-shadow: 0 0 40px rgba(246,215,123,.18), 0 10px 26px rgba(0,0,0,.36)}
+
+.tagline{
+  position:relative;
+  padding:12px 14px;
+  text-align:center;
+  border-top:1px solid rgba(246,215,123,.18);
+  border-bottom:1px solid rgba(246,215,123,.18);
+  background: linear-gradient(90deg, rgba(246,215,123,.06), transparent 30%, transparent 70%, rgba(246,215,123,.06));
+}
+.shayari{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;font-size:18px;line-height:2;color:rgba(245,241,230,.92);direction:rtl}
+.tagline .micro{margin-top:4px;font-family:"Cinzel",serif;font-size:10px;letter-spacing:3px;color:rgba(246,215,123,.72);text-transform:uppercase}
+
+.grid3{
+  display:grid;
+  grid-template-columns: 1fr minmax(260px, 1.35fr) 1fr;
+  grid-template-areas:"left center right";
+  gap:18px;
+  padding-top:2px;
+}
+.panel-rel-left{grid-area:left}
+.panel-center{grid-area:center}
+.panel-rel-right{grid-area:right}
+.panel{border:1px solid rgba(246,215,123,.16);background: linear-gradient(180deg, rgba(10,32,23,.60), rgba(5,10,7,.15));border-radius:18px;overflow:hidden}
+.panel{
+  background:
+    radial-gradient(420px 220px at 20% 0%, rgba(47,99,255,.08), transparent 62%),
+    radial-gradient(420px 220px at 80% 0%, rgba(255,123,212,.08), transparent 62%),
+    linear-gradient(180deg, rgba(10,32,23,.62), rgba(5,10,7,.14));
+}
+.panel-header{padding:12px 14px;text-align:center;border-bottom:1px solid rgba(246,215,123,.14);position:relative}
+.panel-header::after{content:"✦";position:absolute;left:50%;bottom:-9px;transform:translateX(-50%);font-size:10px;color:rgba(246,215,123,.86);background: rgba(10,32,23,.92);padding:0 6px;border-radius:999px;border:1px solid rgba(246,215,123,.14)}
+.panel-title{font-family:"Cinzel",serif;font-size:11px;letter-spacing:3.4px;text-transform:uppercase;color:rgba(246,215,123,.92)}
+.panel-list{list-style:none;margin:0;padding:14px 14px 16px;text-align:center}
+.panel-list li{font-size:15px;line-height:2.1;color:rgba(245,241,230,.82)}
+
+.center{padding:16px 14px 18px;display:flex;flex-direction:column;align-items:center;gap:12px}
+.center{position:relative}
+.allah-center{
+  position:relative;
+  display:grid;
+  place-items:center;
+  width:100%;
+  min-height: var(--allahHalo);
+  padding:6px 0 0;
+}
+.allah-wrap{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:var(--allahHalo);
+  height:var(--allahHalo);
+  border-radius:50%;
+  pointer-events:none;
+  z-index:0;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(246,215,123,.12), transparent 62%),
+    radial-gradient(circle at 50% 55%, rgba(60,230,179,.10), transparent 62%);
+  filter: blur(.2px);
+}
+.allah-wrap::before{
+  content:"";
+  position:absolute;
+  inset: clamp(-54px, -8vw, -36px);
+  border-radius:50%;
+  background:
+    conic-gradient(from 0deg,
+      rgba(246,215,123,.00),
+      rgba(255,207,74,.30),
+      rgba(68,255,210,.18),
+      rgba(47,99,255,.18),
+      rgba(155,107,255,.18),
+      rgba(255,123,212,.16),
+      rgba(255,207,74,.20),
+      rgba(246,215,123,.00));
+  filter: blur(14px) saturate(1.3);
+  opacity:.9;
+  mix-blend-mode: screen;
+  animation: shineSpin 10s linear infinite;
+}
+.allah-wrap::after{
+  content:"";
+  position:absolute;
+  inset: clamp(-26px, -4vw, -14px);
+  border-radius:50%;
+  background: radial-gradient(circle at 50% 50%, rgba(246,215,123,.22), transparent 66%);
+  filter: blur(18px);
+  opacity:.65;
+  mix-blend-mode: screen;
+  animation: shinePulse 3.6s ease-in-out infinite;
+}
+@keyframes shineSpin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+@keyframes shinePulse{0%,100%{transform:scale(.96);opacity:.55}50%{transform:scale(1.04);opacity:.78}}
+
+.allah{position:relative;z-index:1;font-family:"Noto Naskh Arabic","Amiri",serif;font-size:48px;color:rgba(255,243,227,.96);text-shadow: 0 18px 46px rgba(0,0,0,.45), 0 0 34px rgba(255,123,212,.12), 0 0 44px rgba(47,99,255,.10)}
+.headline{margin-top:2px;font-family:"Cinzel",serif;font-size:13px;letter-spacing:6px;text-transform:uppercase;color:rgba(245,241,230,.78)}
+.invite-quote{margin-top:-4px;font-family:"Cinzel",serif;font-size:10px;letter-spacing:2.6px;text-transform:uppercase;color:rgba(245,241,230,.72);text-align:center}
+.invite-quote .label-en,.invite-quote .label-ur{display:block}
+.invite-quote .label-ur{margin-top:6px;font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;font-size:13px;letter-spacing:0;text-transform:none;color:rgba(246,215,123,.88)}
+.person{text-align:center;padding:10px 12px;width:100%;border-radius:16px;border:1px solid rgba(246,215,123,.16);background: linear-gradient(180deg, rgba(246,215,123,.07), transparent)}
+.person-name{display:block;font-size:30px;color:#fff;letter-spacing:.6px}
+.person-sub{display:block;margin-top:5px;font-family:"Cinzel",serif;font-size:10px;letter-spacing:2.6px;color:rgba(246,215,123,.72);text-transform:uppercase}
+
+.divider{width:100%;display:grid;grid-template-columns: 1fr auto 1fr;align-items:center;gap:12px;padding:8px 0 4px}
+.divider .line{height:1px;background: linear-gradient(to right, transparent, rgba(246,215,123,.32), transparent)}
+.divider .gem{display:flex;align-items:center;gap:8px;color:rgba(246,215,123,.82)}
+.divider .gem .moon{font-family:"Noto Naskh Arabic","Amiri",serif;font-size:18px;opacity:.85}
+
+.venue{margin-top:4px;text-align:center;padding:14px 18px 16px;border-top:1px solid rgba(246,215,123,.16)}
+.venue .label{display:inline-flex;align-items:center;gap:10px;font-family:"Cinzel",serif;font-size:11px;letter-spacing:5px;color:rgba(246,215,123,.90);text-transform:uppercase}
+.schedule{
+  margin:12px auto 0;
+  max-width:760px;
+  padding:10px 12px;
+  border-radius:16px;
+  border:1px solid rgba(246,215,123,.16);
+  background: linear-gradient(180deg, rgba(47,99,255,.06), rgba(10,32,23,.18));
+}
+.schedule-label{
+  font-family:"Cinzel",serif;
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:rgba(246,215,123,.86);
+}
+.schedule-value{margin-top:6px;font-size:15px;color:rgba(245,241,230,.88);line-height:1.55}
+.schedule-value .label-en,.schedule-value .label-ur{display:block}
+.schedule-value .label-en{font-family:"Cinzel",serif;font-size:11px;letter-spacing:2.4px;text-transform:uppercase;color:rgba(245,241,230,.80)}
+.schedule-value .label-ur{margin-top:6px;font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;font-size:15px;letter-spacing:0;color:rgba(245,241,230,.88)}
+.venue .address{margin:10px auto 0;max-width:720px;font-size:16px;color:rgba(245,241,230,.88);line-height:1.7}
+.venue .address .label-en,.venue .address .label-ur{display:block}
+.venue .address .label-ur{margin-top:10px;font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;font-size:15px;letter-spacing:0;color:rgba(245,241,230,.88)}
+.map-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  margin:12px auto 0;
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid rgba(246,215,123,.28);
+  background:
+    radial-gradient(240px 120px at 20% 0%, rgba(47,99,255,.16), transparent 60%),
+    radial-gradient(240px 120px at 80% 0%, rgba(139,92,246,.16), transparent 60%),
+    linear-gradient(180deg, rgba(60,230,179,.12), rgba(10,32,23,.42));
+  color:rgba(245,241,230,.92);
+  text-decoration:none;
+  font-family:"Cinzel",serif;
+  font-size:10px;
+  letter-spacing:2.8px;
+  text-transform:uppercase;
+  box-shadow: 0 16px 44px rgba(0,0,0,.28);
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.map-btn:hover{transform: translateY(-1px); border-color: rgba(246,215,123,.44)}
+.map-btn:active{transform: translateY(0)}
+.hl{color:#fff}
+.footer-stars{display:flex;align-items:center;justify-content:center;gap:12px;padding:12px 0 6px;color:rgba(246,215,123,.62);font-size:12px;letter-spacing:6px}
+
+.label-en,.label-ur{display:inline-block}
+.face-en .label-ur{display:none}
+.face-ur .label-en{display:none}
+
+/* Keep identical vertical rhythm between faces (hide alt language but reserve space) */
+.face-en .invite-quote .label-ur,
+.face-en .schedule-value .label-ur,
+.face-en .address .label-ur{
+  display:block;
+  visibility:hidden;
+}
+.face-ur .invite-quote .label-en,
+.face-ur .schedule-value .label-en,
+.face-ur .address .label-en{
+  display:block;
+  visibility:hidden;
+}
+
+.face-ur .headline{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;letter-spacing:0;text-transform:none;color:rgba(245,241,230,.88)}
+.face-ur .panel-title{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;letter-spacing:0;text-transform:none}
+.face-ur .person-sub{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;font-size:13px;letter-spacing:0;text-transform:none}
+.face-ur .venue .label{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;font-size:15px;letter-spacing:0;text-transform:none}
+.face-ur .person-name{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;letter-spacing:0}
+.face-ur .panel-list li{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;letter-spacing:0;color:rgba(245,241,230,.86)}
+.face-ur .map-btn{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;letter-spacing:0;text-transform:none}
+.face-ur .schedule-label{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;letter-spacing:0;text-transform:none}
+
+@media (max-width: 860px){
+  .grid3{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "center"
+      "left"
+      "right";
+    gap:14px;
+  }
+  .bismillah{font-size:36px}
+  .person-name{font-size:28px}
+}
+@media (max-width: 460px){
+  .card-face{padding:22px 16px 18px}
+  .bismillah{font-size:32px}
+  .shayari{font-size:16px}
+  .person-name{font-size:24px}
+  .controls{gap:8px}
+  .chip{padding:9px 10px; letter-spacing:1.8px}
+  .panel-list li{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+}
+@media (prefers-reduced-motion: reduce){
+  .card::before{animation:none}
+  body::before{animation:none}
+  .allah-wrap::before{animation:none}
+  .allah-wrap::after{animation:none}
+  .card-face{transition:none}
+  .chip{transition:none}
+  .map-btn{transition:none}
+}
+
+@media print{
+  body{background:#fff;color:#111}
+  body::before{display:none}
+  .topbar{display:none}
+  .stage{padding:0}
+  .card{box-shadow:none;border-radius:0;overflow:visible;background:#fff}
+  .card::before,.card::after{display:none}
+  .card-border{display:none}
+  .card-faces{height:auto !important;display:block}
+  .card-face{
+    opacity:1 !important;
+    transform:none !important;
+    filter:none !important;
+    pointer-events:auto;
+    padding:22mm 18mm 18mm;
+    break-after: page;
+  }
+  .card-face:last-child{break-after:auto}
+  .map-btn{border-color:#999;color:#111;box-shadow:none}
+}
