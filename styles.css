@@ -1,41 +1,49 @@
 /* Wedding Card – Static, animated, Islamic aesthetic */
 :root{
-  --bg0:#050a07;
-  --bg1:#07150f;
-  --ink:#fff9ef;
-  --gold:#f6d77b;
-  --green0:#06110c;
-  --green1:#0a2b1d;
-  --green2:#0f4a31;
-  --green3:#1b6a45;
+  --bg0:#fffaf1;
+  --bg1:#f3eee3;
+  --ink:#1f2430;
+  --inkSoft:#2f3646;
+  --inkMuted:#4b5363;
+  --gold:#d8b867;
+  --green0:#eef6f0;
+  --green1:#f7f2e7;
+  --green2:#2b5b45;
+  --green3:#3c7a5c;
   --mint:#44ffd2;
   --royalBlue:#2f63ff;
   --royalViolet:#9b6bff;
   --sapphire:#16c6ff;
   --ruby:#ff2e78;
   --blush:#ff7bd4;
-  --pearl:#fff3e3;
-  --sunrise:#ffcf4a;
+  --pearl:#fffaf3;
+  --sunrise:#f4c651;
   --neonLime:#b7ff4a;
+  --textGlow1: rgba(47,99,255,.22);
+  --textGlow2: rgba(184,144,47,.24);
+  --textGlow3: rgba(255,123,212,.18);
   --allahHalo: clamp(220px, 54vw, 300px);
   --radius:26px;
 }
 
 *{box-sizing:border-box}
-html,body{height:100%}
+html,body{height:100%;min-height:100%}
 body{
   margin:0;
   color:var(--ink);
   background:
-    radial-gradient(1200px 600px at 20% 10%, rgba(255,207,74,.18), transparent 55%),
-    radial-gradient(900px 520px at 78% 18%, rgba(68,255,210,.18), transparent 60%),
-    radial-gradient(900px 520px at 88% 10%, rgba(47,99,255,.16), transparent 60%),
-    radial-gradient(820px 520px at 12% 46%, rgba(155,107,255,.16), transparent 62%),
-    radial-gradient(820px 520px at 35% 12%, rgba(255,123,212,.16), transparent 62%),
-    radial-gradient(760px 560px at 60% 95%, rgba(183,255,74,.10), transparent 64%),
-    radial-gradient(900px 900px at 50% 100%, rgba(27,106,69,.52), transparent 62%),
-    radial-gradient(900px 700px at 20% 100%, rgba(15,74,49,.46), transparent 60%),
-    linear-gradient(180deg, var(--green1), var(--bg0));
+    radial-gradient(1200px 600px at 20% 10%, rgba(244,198,81,.20), transparent 55%),
+    radial-gradient(900px 520px at 78% 18%, rgba(22,198,255,.12), transparent 60%),
+    radial-gradient(900px 520px at 88% 10%, rgba(47,99,255,.10), transparent 60%),
+    radial-gradient(820px 520px at 12% 46%, rgba(155,107,255,.10), transparent 62%),
+    radial-gradient(820px 520px at 35% 12%, rgba(255,123,212,.08), transparent 62%),
+    radial-gradient(760px 560px at 60% 95%, rgba(183,255,74,.08), transparent 64%),
+    radial-gradient(900px 900px at 50% 100%, rgba(60,122,92,.12), transparent 62%),
+    radial-gradient(900px 700px at 20% 100%, rgba(43,91,69,.10), transparent 60%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+  background-repeat:no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
   font-family: "Cormorant Garamond", ui-serif, Georgia, "Times New Roman", serif;
   overflow-x:hidden;
   position:relative;
@@ -43,27 +51,33 @@ body{
 
 body::before{
   content:"";
-  position:fixed;
-  inset:-18%;
+  position:absolute;
+  inset:0;
+  min-height:100%;
+  width:100%;
+  height:100%;
   background:
-    radial-gradient(700px 520px at 20% 25%, rgba(68,255,210,.18), transparent 62%),
-    radial-gradient(820px 620px at 78% 30%, rgba(255,207,74,.16), transparent 60%),
-    radial-gradient(760px 560px at 86% 16%, rgba(47,99,255,.20), transparent 62%),
-    radial-gradient(720px 540px at 12% 46%, rgba(155,107,255,.18), transparent 62%),
-    radial-gradient(740px 540px at 40% 18%, rgba(255,123,212,.18), transparent 62%),
-    radial-gradient(900px 700px at 55% 80%, rgba(27,106,69,.24), transparent 64%),
+    radial-gradient(700px 520px at 20% 25%, rgba(22,198,255,.10), transparent 62%),
+    radial-gradient(820px 620px at 78% 30%, rgba(244,198,81,.14), transparent 60%),
+    radial-gradient(760px 560px at 86% 16%, rgba(47,99,255,.12), transparent 62%),
+    radial-gradient(720px 540px at 12% 46%, rgba(155,107,255,.12), transparent 62%),
+    radial-gradient(740px 540px at 40% 18%, rgba(255,123,212,.10), transparent 62%),
+    radial-gradient(900px 700px at 55% 80%, rgba(60,122,92,.12), transparent 64%),
     conic-gradient(from 220deg,
-      rgba(68,255,210,.08),
-      rgba(255,207,74,.07),
-      rgba(47,99,255,.08),
-      rgba(155,107,255,.08),
-      rgba(255,123,212,.07),
-      rgba(27,106,69,.10),
-      rgba(255,207,74,.06),
-      rgba(68,255,210,.08));
-  filter: blur(32px) saturate(1.55) contrast(1.05);
-  opacity:.78;
-  mix-blend-mode: screen;
+      rgba(22,198,255,.06),
+      rgba(244,198,81,.07),
+      rgba(47,99,255,.06),
+      rgba(155,107,255,.06),
+      rgba(255,123,212,.05),
+      rgba(60,122,92,.06),
+      rgba(244,198,81,.05),
+      rgba(22,198,255,.06));
+  filter: blur(34px) saturate(1.2) contrast(1.02);
+  opacity:.6;
+  mix-blend-mode: multiply;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position:center;
   pointer-events:none;
   z-index:-1;
   animation: auroraDrift 18s ease-in-out infinite alternate;
@@ -82,36 +96,36 @@ body::before{
   padding:14px 18px;
   backdrop-filter: blur(14px);
   background:
-    radial-gradient(900px 180px at 18% 0%, rgba(47,99,255,.16), transparent 60%),
-    radial-gradient(900px 180px at 82% 0%, rgba(155,107,255,.16), transparent 60%),
-    radial-gradient(900px 180px at 50% 0%, rgba(255,123,212,.12), transparent 62%),
-    linear-gradient(180deg, rgba(5,10,7,.84), rgba(5,10,7,.55));
-  border-bottom:1px solid rgba(246,215,123,.14);
+    radial-gradient(900px 180px at 18% 0%, rgba(47,99,255,.10), transparent 60%),
+    radial-gradient(900px 180px at 82% 0%, rgba(155,107,255,.10), transparent 60%),
+    radial-gradient(900px 180px at 50% 0%, rgba(255,123,212,.08), transparent 62%),
+    linear-gradient(180deg, rgba(255,250,241,.92), rgba(247,242,231,.86));
+  border-bottom:1px solid rgba(216,184,103,.28);
 }
 .brand{display:flex;flex-direction:column;gap:2px;line-height:1.1}
-.brand .b1{font-family:"Noto Naskh Arabic","Amiri",serif;font-size:18px;color:rgba(246,215,123,.92)}
-.brand .b2{font-family:"Cinzel",serif;font-size:11px;letter-spacing:3.6px;color:rgba(245,241,230,.72);text-transform:uppercase}
-.brand .b1{text-shadow: 0 10px 34px rgba(0,0,0,.35), 0 0 34px rgba(255,177,220,.10)}
+.brand .b1{font-family:"Noto Naskh Arabic","Amiri",serif;font-size:18px;color:#b8902f}
+.brand .b2{font-family:"Cinzel",serif;font-size:11px;letter-spacing:3.6px;color:rgba(31,36,48,.72);text-transform:uppercase}
+.brand .b1{text-shadow: 0 10px 24px rgba(31,36,48,.18), 0 0 34px rgba(47,99,255,.12)}
 
 .controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
 .chip{
-  appearance:none;border:1px solid rgba(246,215,123,.28);
+  appearance:none;border:1px solid rgba(216,184,103,.30);
   background:
-    radial-gradient(180px 90px at 20% 0%, rgba(47,99,255,.16), transparent 60%),
-    radial-gradient(180px 90px at 80% 0%, rgba(155,107,255,.16), transparent 60%),
-    radial-gradient(200px 100px at 50% 0%, rgba(255,123,212,.12), transparent 62%),
-    linear-gradient(180deg, rgba(13,44,31,.78), rgba(10,32,23,.78));
-  color:rgba(245,241,230,.92);
+    radial-gradient(180px 90px at 20% 0%, rgba(47,99,255,.12), transparent 60%),
+    radial-gradient(180px 90px at 80% 0%, rgba(155,107,255,.12), transparent 60%),
+    radial-gradient(200px 100px at 50% 0%, rgba(255,123,212,.10), transparent 62%),
+    linear-gradient(180deg, rgba(255,250,241,.96), rgba(247,242,231,.96));
+  color:var(--inkSoft);
   padding:10px 12px;border-radius:999px;
   font-family:"Cinzel",serif;font-size:11px;letter-spacing:2.2px;text-transform:uppercase;
   cursor:pointer;
   transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
   box-shadow: 0 14px 34px rgba(0,0,0,.24);
 }
-.chip:hover{transform: translateY(-1px); border-color: rgba(246,215,123,.42)}
+.chip:hover{transform: translateY(-1px); border-color: rgba(216,184,103,.46)}
 .chip:active{transform: translateY(0)}
-.chip[aria-pressed="true"]{border-color: rgba(246,215,123,.62); box-shadow: 0 12px 34px rgba(0,0,0,.28), 0 0 0 3px rgba(246,215,123,.08) inset}
-.chip-primary{background: linear-gradient(180deg, rgba(246,215,123,.16), rgba(13,44,31,.78))}
+.chip[aria-pressed="true"]{border-color: rgba(216,184,103,.66); box-shadow: 0 12px 34px rgba(31,36,48,.18), 0 0 0 3px rgba(216,184,103,.12) inset}
+.chip-primary{background: linear-gradient(180deg, rgba(216,184,103,.18), rgba(255,250,241,.96))}
 .chip .urdu{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;font-size:12px;letter-spacing:0;text-transform:none;margin-left:8px}
 
 .audio-gate{
@@ -122,24 +136,24 @@ body::before{
   z-index:80;
   padding:12px;
   border-radius:18px;
-  border:1px solid rgba(246,215,123,.22);
+  border:1px solid rgba(216,184,103,.28);
   background:
-    radial-gradient(600px 200px at 30% 0%, rgba(47,99,255,.18), transparent 60%),
-    radial-gradient(600px 200px at 70% 0%, rgba(255,123,212,.16), transparent 60%),
-    linear-gradient(180deg, rgba(5,10,7,.78), rgba(5,10,7,.52));
+    radial-gradient(600px 200px at 30% 0%, rgba(47,99,255,.12), transparent 60%),
+    radial-gradient(600px 200px at 70% 0%, rgba(255,123,212,.10), transparent 60%),
+    linear-gradient(180deg, rgba(255,250,241,.96), rgba(247,242,231,.92));
   backdrop-filter: blur(16px);
-  box-shadow: 0 24px 70px rgba(0,0,0,.38);
+  box-shadow: 0 24px 70px rgba(31,36,48,.22);
 }
 .audio-gate-btn{
   width:100%;
   padding:12px 14px;
   border-radius:14px;
-  border:1px solid rgba(246,215,123,.28);
+  border:1px solid rgba(216,184,103,.30);
   background:
-    radial-gradient(520px 180px at 30% 0%, rgba(68,255,210,.14), transparent 60%),
-    radial-gradient(520px 180px at 70% 0%, rgba(255,123,212,.14), transparent 60%),
-    linear-gradient(180deg, rgba(27,106,69,.40), rgba(10,32,23,.55));
-  color:rgba(255,249,239,.95);
+    radial-gradient(520px 180px at 30% 0%, rgba(22,198,255,.12), transparent 60%),
+    radial-gradient(520px 180px at 70% 0%, rgba(255,123,212,.12), transparent 60%),
+    linear-gradient(180deg, rgba(255,250,241,.98), rgba(247,242,231,.94));
+  color:var(--inkSoft);
   font-family:"Cinzel",serif;
   font-size:11px;
   letter-spacing:3px;
@@ -156,17 +170,17 @@ body::before{
   border-radius:var(--radius);
   overflow:hidden;
   background:
-    radial-gradient(900px 520px at 50% -12%, rgba(68,255,210,.24), transparent 60%),
-    radial-gradient(900px 620px at 50% 118%, rgba(255,207,74,.24), transparent 60%),
-    radial-gradient(980px 600px at 12% 18%, rgba(47,99,255,.22), transparent 62%),
-    radial-gradient(980px 600px at 88% 16%, rgba(155,107,255,.22), transparent 62%),
-    radial-gradient(900px 520px at 50% 22%, rgba(255,123,212,.18), transparent 62%),
-    radial-gradient(820px 520px at 18% 72%, rgba(183,255,74,.12), transparent 62%),
-    linear-gradient(180deg, rgba(24,132,92,.72), rgba(7,18,14,.94));
+    radial-gradient(900px 520px at 50% -12%, rgba(22,198,255,.18), transparent 60%),
+    radial-gradient(900px 620px at 50% 118%, rgba(244,198,81,.22), transparent 60%),
+    radial-gradient(980px 600px at 12% 18%, rgba(47,99,255,.16), transparent 62%),
+    radial-gradient(980px 600px at 88% 16%, rgba(155,107,255,.16), transparent 62%),
+    radial-gradient(900px 520px at 50% 22%, rgba(255,123,212,.12), transparent 62%),
+    radial-gradient(820px 520px at 18% 72%, rgba(183,255,74,.10), transparent 62%),
+    linear-gradient(180deg, rgba(255,255,255,.98), rgba(245,239,227,.96));
   box-shadow:
-    0 46px 140px rgba(0,0,0,.58),
-    0 0 0 1px rgba(246,215,123,.22) inset,
-    0 0 120px rgba(68,255,210,.06);
+    0 46px 140px rgba(31,36,48,.28),
+    0 0 0 1px rgba(216,184,103,.32) inset,
+    0 0 120px rgba(22,198,255,.10);
 }
 .card::before{
   content:"";
@@ -174,11 +188,11 @@ body::before{
   background:
     conic-gradient(from 120deg,
       transparent 0 12%,
-      rgba(246,215,123,.16) 12% 14%,
+      rgba(216,184,103,.22) 12% 14%,
       transparent 14% 25%,
-      rgba(60,230,179,.10) 25% 27%,
+      rgba(22,198,255,.10) 25% 27%,
       transparent 27% 38%,
-      rgba(246,215,123,.14) 38% 40%,
+      rgba(216,184,103,.20) 38% 40%,
       transparent 40% 100%);
   opacity:.95;
   animation: cardSpin 36s linear infinite;
@@ -189,13 +203,13 @@ body::before{
   content:"";
   position:absolute;inset:0;
   background:
-    radial-gradient(900px 520px at 20% 0%, rgba(47,99,255,.16), transparent 62%),
-    radial-gradient(900px 520px at 80% 0%, rgba(255,123,212,.16), transparent 62%),
-    radial-gradient(800px 420px at 50% 0%, rgba(246,215,123,.22), transparent 62%),
-    radial-gradient(760px 520px at 50% 110%, rgba(246,215,123,.12), transparent 64%),
-    repeating-linear-gradient(90deg, rgba(246,215,123,.09) 0 1px, transparent 1px 22px),
-    repeating-linear-gradient(0deg, rgba(246,215,123,.08) 0 1px, transparent 1px 22px);
-  opacity:.11;
+    radial-gradient(900px 520px at 20% 0%, rgba(47,99,255,.12), transparent 62%),
+    radial-gradient(900px 520px at 80% 0%, rgba(255,123,212,.12), transparent 62%),
+    radial-gradient(800px 420px at 50% 0%, rgba(216,184,103,.22), transparent 62%),
+    radial-gradient(760px 520px at 50% 110%, rgba(216,184,103,.12), transparent 64%),
+    repeating-linear-gradient(90deg, rgba(216,184,103,.12) 0 1px, transparent 1px 22px),
+    repeating-linear-gradient(0deg, rgba(216,184,103,.10) 0 1px, transparent 1px 22px);
+  opacity:.22;
   pointer-events:none;
 }
 @keyframes cardSpin{0%{transform: rotate(0deg)}100%{transform: rotate(360deg)}}
@@ -203,15 +217,15 @@ body::before{
 .card-border{
   position:absolute;inset:clamp(12px, 2.6vw, 18px);
   border-radius:calc(var(--radius) - 10px);
-  border:1px solid rgba(246,215,123,.32);
-  box-shadow: 0 0 0 1px rgba(246,215,123,.10) inset, 0 0 0 10px rgba(5,10,7,.20) inset;
+  border:1px solid rgba(216,184,103,.44);
+  box-shadow: 0 0 0 1px rgba(216,184,103,.18) inset, 0 0 0 10px rgba(255,250,241,.65) inset;
   pointer-events:none;z-index:5;
 }
 .card-border::before{
   content:"";
   position:absolute;inset:clamp(8px, 2vw, 10px);
   border-radius:calc(var(--radius) - 18px);
-  border:1px solid rgba(246,215,123,.18);
+  border:1px solid rgba(216,184,103,.22);
 }
 
 .card-faces{position:relative;z-index:10;display:grid;grid-template-areas:"stack"}
@@ -231,23 +245,48 @@ body::before{
 }
 
 .content{position:relative;display:flex;flex-direction:column;gap:14px}
+.bismillah,
+.shayari,
+.panel-list li,
+.person-name,
+.person-sub,
+.headline,
+.invite-quote,
+.schedule-label,
+.schedule-value,
+.venue .label,
+.address,
+.label-786,
+.panel-title{
+  text-shadow:
+    0 0 10px var(--textGlow1),
+    0 0 20px var(--textGlow2),
+    0 0 32px var(--textGlow3);
+  font-weight:600;
+}
+.panel-list li{
+  text-shadow:
+    0 0 8px var(--textGlow1),
+    0 0 16px var(--textGlow2);
+  font-weight:600;
+}
 .header{display:flex;align-items:center;justify-content:center;padding-top:2px}
 .arch{width:min(520px, 100%);position:relative}
 .arch svg{width:100%;height:auto;display:block;filter: drop-shadow(0 10px 24px rgba(0,0,0,.45))}
 .arch-text{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px 22px 16px;text-align:center}
-.label-786{font-family:"Cinzel",serif;font-size:12px;letter-spacing:6px;color:rgba(246,215,123,.95);text-shadow: 0 8px 30px rgba(0,0,0,.35)}
-.bismillah{margin-top:8px;font-family:"Noto Naskh Arabic","Amiri",serif;font-size:42px;color:#fff;direction:rtl;line-height:1.25;text-shadow: 0 0 40px rgba(246,215,123,.18), 0 10px 26px rgba(0,0,0,.36)}
+.label-786{font-family:"Cinzel",serif;font-size:12px;letter-spacing:6px;color:#b8902f;text-shadow: 0 8px 24px rgba(31,36,48,.18)}
+.bismillah{margin-top:8px;font-family:"Noto Naskh Arabic","Amiri",serif;font-size:42px;color:var(--ink);direction:rtl;line-height:1.25;text-shadow: 0 0 36px rgba(216,184,103,.20), 0 10px 26px rgba(31,36,48,.18)}
 
 .tagline{
   position:relative;
   padding:12px 14px;
   text-align:center;
-  border-top:1px solid rgba(246,215,123,.18);
-  border-bottom:1px solid rgba(246,215,123,.18);
-  background: linear-gradient(90deg, rgba(246,215,123,.06), transparent 30%, transparent 70%, rgba(246,215,123,.06));
+  border-top:1px solid rgba(216,184,103,.22);
+  border-bottom:1px solid rgba(216,184,103,.22);
+  background: linear-gradient(90deg, rgba(216,184,103,.10), transparent 30%, transparent 70%, rgba(216,184,103,.10));
 }
-.shayari{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;font-size:18px;line-height:2;color:rgba(245,241,230,.92);direction:rtl}
-.tagline .micro{margin-top:4px;font-family:"Cinzel",serif;font-size:10px;letter-spacing:3px;color:rgba(246,215,123,.72);text-transform:uppercase}
+.shayari{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;font-size:18px;line-height:2;color:var(--inkSoft);direction:rtl}
+.tagline .micro{margin-top:4px;font-family:"Cinzel",serif;font-size:10px;letter-spacing:3px;color:rgba(184,144,47,.75);text-transform:uppercase}
 
 .grid3{
   display:grid;
@@ -259,18 +298,18 @@ body::before{
 .panel-rel-left{grid-area:left}
 .panel-center{grid-area:center}
 .panel-rel-right{grid-area:right}
-.panel{border:1px solid rgba(246,215,123,.16);background: linear-gradient(180deg, rgba(10,32,23,.60), rgba(5,10,7,.15));border-radius:18px;overflow:hidden}
+.panel{border:1px solid rgba(216,184,103,.22);background: linear-gradient(180deg, rgba(10,32,23,.60), rgba(5,10,7,.15));border-radius:18px;overflow:hidden}
 .panel{
   background:
     radial-gradient(420px 220px at 20% 0%, rgba(47,99,255,.08), transparent 62%),
     radial-gradient(420px 220px at 80% 0%, rgba(255,123,212,.08), transparent 62%),
-    linear-gradient(180deg, rgba(10,32,23,.62), rgba(5,10,7,.14));
+    linear-gradient(180deg, rgba(255,250,241,.92), rgba(245,239,227,.88));
 }
-.panel-header{padding:12px 14px;text-align:center;border-bottom:1px solid rgba(246,215,123,.14);position:relative}
-.panel-header::after{content:"✦";position:absolute;left:50%;bottom:-9px;transform:translateX(-50%);font-size:10px;color:rgba(246,215,123,.86);background: rgba(10,32,23,.92);padding:0 6px;border-radius:999px;border:1px solid rgba(246,215,123,.14)}
-.panel-title{font-family:"Cinzel",serif;font-size:11px;letter-spacing:3.4px;text-transform:uppercase;color:rgba(246,215,123,.92)}
+.panel-header{padding:12px 14px;text-align:center;border-bottom:1px solid rgba(216,184,103,.22);position:relative}
+.panel-header::after{content:"✦";position:absolute;left:50%;bottom:-9px;transform:translateX(-50%);font-size:10px;color:#b8902f;background: rgba(255,250,241,.96);padding:0 6px;border-radius:999px;border:1px solid rgba(216,184,103,.22)}
+.panel-title{font-family:"Cinzel",serif;font-size:11px;letter-spacing:3.4px;text-transform:uppercase;color:#b8902f}
 .panel-list{list-style:none;margin:0;padding:14px 14px 16px;text-align:center}
-.panel-list li{font-size:15px;line-height:2.1;color:rgba(245,241,230,.82)}
+.panel-list li{font-size:15px;line-height:2.1;color:var(--inkSoft)}
 
 .center{padding:16px 14px 18px;display:flex;flex-direction:column;align-items:center;gap:12px}
 .center{position:relative}
@@ -293,8 +332,8 @@ body::before{
   pointer-events:none;
   z-index:0;
   background:
-    radial-gradient(circle at 50% 50%, rgba(246,215,123,.12), transparent 62%),
-    radial-gradient(circle at 50% 55%, rgba(60,230,179,.10), transparent 62%);
+    radial-gradient(circle at 50% 50%, rgba(216,184,103,.20), transparent 62%),
+    radial-gradient(circle at 50% 55%, rgba(22,198,255,.12), transparent 62%);
   filter: blur(.2px);
 }
 .allah-wrap::before{
@@ -304,14 +343,14 @@ body::before{
   border-radius:50%;
   background:
     conic-gradient(from 0deg,
-      rgba(246,215,123,.00),
-      rgba(255,207,74,.30),
-      rgba(68,255,210,.18),
+      rgba(216,184,103,.00),
+      rgba(244,198,81,.32),
+      rgba(22,198,255,.16),
       rgba(47,99,255,.18),
       rgba(155,107,255,.18),
-      rgba(255,123,212,.16),
-      rgba(255,207,74,.20),
-      rgba(246,215,123,.00));
+      rgba(255,123,212,.14),
+      rgba(244,198,81,.22),
+      rgba(216,184,103,.00));
   filter: blur(14px) saturate(1.3);
   opacity:.9;
   mix-blend-mode: screen;
@@ -322,7 +361,7 @@ body::before{
   position:absolute;
   inset: clamp(-26px, -4vw, -14px);
   border-radius:50%;
-  background: radial-gradient(circle at 50% 50%, rgba(246,215,123,.22), transparent 66%);
+  background: radial-gradient(circle at 50% 50%, rgba(216,184,103,.24), transparent 66%);
   filter: blur(18px);
   opacity:.65;
   mix-blend-mode: screen;
@@ -331,44 +370,44 @@ body::before{
 @keyframes shineSpin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 @keyframes shinePulse{0%,100%{transform:scale(.96);opacity:.55}50%{transform:scale(1.04);opacity:.78}}
 
-.allah{position:relative;z-index:1;font-family:"Noto Naskh Arabic","Amiri",serif;font-size:48px;color:rgba(255,243,227,.96);text-shadow: 0 18px 46px rgba(0,0,0,.45), 0 0 34px rgba(255,123,212,.12), 0 0 44px rgba(47,99,255,.10)}
-.headline{margin-top:2px;font-family:"Cinzel",serif;font-size:13px;letter-spacing:6px;text-transform:uppercase;color:rgba(245,241,230,.78)}
-.invite-quote{margin-top:-4px;font-family:"Cinzel",serif;font-size:10px;letter-spacing:2.6px;text-transform:uppercase;color:rgba(245,241,230,.72);text-align:center}
+.allah{position:relative;z-index:1;font-family:"Noto Naskh Arabic","Amiri",serif;font-size:48px;color:var(--ink);text-shadow: 0 18px 46px rgba(31,36,48,.20), 0 0 34px rgba(255,123,212,.10), 0 0 44px rgba(47,99,255,.10)}
+.headline{margin-top:2px;font-family:"Cinzel",serif;font-size:13px;letter-spacing:6px;text-transform:uppercase;color:var(--inkMuted)}
+.invite-quote{margin-top:-4px;font-family:"Cinzel",serif;font-size:10px;letter-spacing:2.6px;text-transform:uppercase;color:var(--inkMuted);text-align:center}
 .invite-quote .label-en,.invite-quote .label-ur{display:block}
-.invite-quote .label-ur{margin-top:6px;font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;font-size:13px;letter-spacing:0;text-transform:none;color:rgba(246,215,123,.88)}
-.person{text-align:center;padding:10px 12px;width:100%;border-radius:16px;border:1px solid rgba(246,215,123,.16);background: linear-gradient(180deg, rgba(246,215,123,.07), transparent)}
-.person-name{display:block;font-size:30px;color:#fff;letter-spacing:.6px}
-.person-sub{display:block;margin-top:5px;font-family:"Cinzel",serif;font-size:10px;letter-spacing:2.6px;color:rgba(246,215,123,.72);text-transform:uppercase}
+.invite-quote .label-ur{margin-top:6px;font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;font-size:13px;letter-spacing:0;text-transform:none;color:#b8902f}
+.person{text-align:center;padding:10px 12px;width:100%;border-radius:16px;border:1px solid rgba(216,184,103,.20);background: linear-gradient(180deg, rgba(216,184,103,.10), transparent)}
+.person-name{display:block;font-size:30px;color:var(--ink);letter-spacing:.6px}
+.person-sub{display:block;margin-top:5px;font-family:"Cinzel",serif;font-size:10px;letter-spacing:2.6px;color:rgba(184,144,47,.75);text-transform:uppercase}
 
 .divider{width:100%;display:grid;grid-template-columns: 1fr auto 1fr;align-items:center;gap:12px;padding:8px 0 4px}
-.divider .line{height:1px;background: linear-gradient(to right, transparent, rgba(246,215,123,.32), transparent)}
-.divider .gem{display:flex;align-items:center;gap:8px;color:rgba(246,215,123,.82)}
+.divider .line{height:1px;background: linear-gradient(to right, transparent, rgba(216,184,103,.36), transparent)}
+.divider .gem{display:flex;align-items:center;gap:8px;color:rgba(184,144,47,.80)}
 .divider .gem .moon{font-family:"Noto Naskh Arabic","Amiri",serif;font-size:18px;opacity:.85}
 
-.venue{margin-top:4px;text-align:center;padding:14px 18px 16px;border-top:1px solid rgba(246,215,123,.16)}
-.venue .label{display:inline-flex;align-items:center;gap:10px;font-family:"Cinzel",serif;font-size:11px;letter-spacing:5px;color:rgba(246,215,123,.90);text-transform:uppercase}
+.venue{margin-top:4px;text-align:center;padding:14px 18px 16px;border-top:1px solid rgba(216,184,103,.22)}
+.venue .label{display:inline-flex;align-items:center;gap:10px;font-family:"Cinzel",serif;font-size:11px;letter-spacing:5px;color:#b8902f;text-transform:uppercase}
 .schedule{
   margin:12px auto 0;
   max-width:760px;
   padding:10px 12px;
   border-radius:16px;
-  border:1px solid rgba(246,215,123,.16);
-  background: linear-gradient(180deg, rgba(47,99,255,.06), rgba(10,32,23,.18));
+  border:1px solid rgba(216,184,103,.24);
+  background: linear-gradient(180deg, rgba(47,99,255,.06), rgba(255,250,241,.92));
 }
 .schedule-label{
   font-family:"Cinzel",serif;
   font-size:10px;
   letter-spacing:3px;
   text-transform:uppercase;
-  color:rgba(246,215,123,.86);
+  color:#b8902f;
 }
-.schedule-value{margin-top:6px;font-size:15px;color:rgba(245,241,230,.88);line-height:1.55}
+.schedule-value{margin-top:6px;font-size:15px;color:var(--inkSoft);line-height:1.55}
 .schedule-value .label-en,.schedule-value .label-ur{display:block}
-.schedule-value .label-en{font-family:"Cinzel",serif;font-size:11px;letter-spacing:2.4px;text-transform:uppercase;color:rgba(245,241,230,.80)}
-.schedule-value .label-ur{margin-top:6px;font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;font-size:15px;letter-spacing:0;color:rgba(245,241,230,.88)}
-.venue .address{margin:10px auto 0;max-width:720px;font-size:16px;color:rgba(245,241,230,.88);line-height:1.7}
+.schedule-value .label-en{font-family:"Cinzel",serif;font-size:11px;letter-spacing:2.4px;text-transform:uppercase;color:var(--inkMuted)}
+.schedule-value .label-ur{margin-top:6px;font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;font-size:15px;letter-spacing:0;color:var(--inkSoft)}
+.venue .address{margin:10px auto 0;max-width:720px;font-size:16px;color:var(--inkSoft);line-height:1.7}
 .venue .address .label-en,.venue .address .label-ur{display:block}
-.venue .address .label-ur{margin-top:10px;font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;font-size:15px;letter-spacing:0;color:rgba(245,241,230,.88)}
+.venue .address .label-ur{margin-top:10px;font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;font-size:15px;letter-spacing:0;color:var(--inkSoft)}
 .map-btn{
   display:inline-flex;
   align-items:center;
@@ -377,12 +416,12 @@ body::before{
   margin:12px auto 0;
   padding:10px 14px;
   border-radius:999px;
-  border:1px solid rgba(246,215,123,.28);
+  border:1px solid rgba(216,184,103,.30);
   background:
-    radial-gradient(240px 120px at 20% 0%, rgba(47,99,255,.16), transparent 60%),
-    radial-gradient(240px 120px at 80% 0%, rgba(139,92,246,.16), transparent 60%),
-    linear-gradient(180deg, rgba(60,230,179,.12), rgba(10,32,23,.42));
-  color:rgba(245,241,230,.92);
+    radial-gradient(240px 120px at 20% 0%, rgba(47,99,255,.14), transparent 60%),
+    radial-gradient(240px 120px at 80% 0%, rgba(139,92,246,.14), transparent 60%),
+    linear-gradient(180deg, rgba(255,250,241,.96), rgba(247,242,231,.92));
+  color:var(--inkSoft);
   text-decoration:none;
   font-family:"Cinzel",serif;
   font-size:10px;
@@ -391,10 +430,10 @@ body::before{
   box-shadow: 0 16px 44px rgba(0,0,0,.28);
   transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
 }
-.map-btn:hover{transform: translateY(-1px); border-color: rgba(246,215,123,.44)}
+.map-btn:hover{transform: translateY(-1px); border-color: rgba(216,184,103,.46)}
 .map-btn:active{transform: translateY(0)}
-.hl{color:#fff}
-.footer-stars{display:flex;align-items:center;justify-content:center;gap:12px;padding:12px 0 6px;color:rgba(246,215,123,.62);font-size:12px;letter-spacing:6px}
+.hl{color:var(--ink)}
+.footer-stars{display:flex;align-items:center;justify-content:center;gap:12px;padding:12px 0 6px;color:rgba(184,144,47,.62);font-size:12px;letter-spacing:6px}
 
 .label-en,.label-ur{display:inline-block}
 .face-en .label-ur{display:none}
@@ -414,14 +453,229 @@ body::before{
   visibility:hidden;
 }
 
-.face-ur .headline{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;letter-spacing:0;text-transform:none;color:rgba(245,241,230,.88)}
+.face-ur .headline{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;letter-spacing:0;text-transform:none;color:var(--inkSoft)}
 .face-ur .panel-title{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;letter-spacing:0;text-transform:none}
 .face-ur .person-sub{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;font-size:13px;letter-spacing:0;text-transform:none}
 .face-ur .venue .label{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;font-size:15px;letter-spacing:0;text-transform:none}
 .face-ur .person-name{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;letter-spacing:0}
-.face-ur .panel-list li{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;letter-spacing:0;color:rgba(245,241,230,.86)}
+.face-ur .panel-list li{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;letter-spacing:0;color:var(--inkSoft)}
 .face-ur .map-btn{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;letter-spacing:0;text-transform:none}
 .face-ur .schedule-label{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Amiri",serif;letter-spacing:0;text-transform:none}
+
+body[data-theme="dark"]{
+  --bg0:#050a07;
+  --bg1:#07150f;
+  --ink:#fff9ef;
+  --inkSoft: rgba(245,241,230,.90);
+  --inkMuted: rgba(245,241,230,.72);
+  --gold:#f6d77b;
+  --textGlow1: rgba(246,215,123,.36);
+  --textGlow2: rgba(68,255,210,.22);
+  --textGlow3: rgba(155,107,255,.24);
+  color:var(--ink);
+  background:
+    radial-gradient(1200px 600px at 20% 10%, rgba(255,207,74,.18), transparent 55%),
+    radial-gradient(900px 520px at 78% 18%, rgba(68,255,210,.18), transparent 60%),
+    radial-gradient(900px 520px at 88% 10%, rgba(47,99,255,.16), transparent 60%),
+    radial-gradient(820px 520px at 12% 46%, rgba(155,107,255,.16), transparent 62%),
+    radial-gradient(820px 520px at 35% 12%, rgba(255,123,212,.16), transparent 62%),
+    radial-gradient(760px 560px at 60% 95%, rgba(183,255,74,.10), transparent 64%),
+    radial-gradient(900px 900px at 50% 100%, rgba(27,106,69,.52), transparent 62%),
+    radial-gradient(900px 700px at 20% 100%, rgba(15,74,49,.46), transparent 60%),
+    linear-gradient(180deg, var(--green1), var(--bg0));
+}
+body[data-theme="dark"]::before{
+  background:
+    radial-gradient(700px 520px at 20% 25%, rgba(68,255,210,.18), transparent 62%),
+    radial-gradient(820px 620px at 78% 30%, rgba(255,207,74,.16), transparent 60%),
+    radial-gradient(760px 560px at 86% 16%, rgba(47,99,255,.20), transparent 62%),
+    radial-gradient(720px 540px at 12% 46%, rgba(155,107,255,.18), transparent 62%),
+    radial-gradient(740px 540px at 40% 18%, rgba(255,123,212,.18), transparent 62%),
+    radial-gradient(900px 700px at 55% 80%, rgba(27,106,69,.24), transparent 64%),
+    conic-gradient(from 220deg,
+      rgba(68,255,210,.08),
+      rgba(255,207,74,.07),
+      rgba(47,99,255,.08),
+      rgba(155,107,255,.08),
+      rgba(255,123,212,.07),
+      rgba(27,106,69,.10),
+      rgba(255,207,74,.06),
+      rgba(68,255,210,.08));
+  filter: blur(32px) saturate(1.55) contrast(1.05);
+  opacity:.78;
+  mix-blend-mode: screen;
+}
+body[data-theme="dark"] .topbar{
+  background:
+    radial-gradient(900px 180px at 18% 0%, rgba(47,99,255,.16), transparent 60%),
+    radial-gradient(900px 180px at 82% 0%, rgba(155,107,255,.16), transparent 60%),
+    radial-gradient(900px 180px at 50% 0%, rgba(255,123,212,.12), transparent 62%),
+    linear-gradient(180deg, rgba(5,10,7,.84), rgba(5,10,7,.55));
+  border-bottom:1px solid rgba(246,215,123,.14);
+}
+body[data-theme="dark"] .brand .b1{color:rgba(246,215,123,.92);text-shadow: 0 10px 34px rgba(0,0,0,.35), 0 0 34px rgba(255,177,220,.10)}
+body[data-theme="dark"] .brand .b2{color:rgba(245,241,230,.72)}
+body[data-theme="dark"] .chip{
+  border:1px solid rgba(246,215,123,.28);
+  background:
+    radial-gradient(180px 90px at 20% 0%, rgba(47,99,255,.16), transparent 60%),
+    radial-gradient(180px 90px at 80% 0%, rgba(155,107,255,.16), transparent 60%),
+    radial-gradient(200px 100px at 50% 0%, rgba(255,123,212,.12), transparent 62%),
+    linear-gradient(180deg, rgba(13,44,31,.78), rgba(10,32,23,.78));
+  color:rgba(245,241,230,.92);
+  box-shadow: 0 14px 34px rgba(0,0,0,.24);
+}
+body[data-theme="dark"] .chip:hover{border-color: rgba(246,215,123,.42)}
+body[data-theme="dark"] .chip[aria-pressed="true"]{border-color: rgba(246,215,123,.62); box-shadow: 0 12px 34px rgba(0,0,0,.28), 0 0 0 3px rgba(246,215,123,.08) inset}
+body[data-theme="dark"] .chip-primary{background: linear-gradient(180deg, rgba(246,215,123,.16), rgba(13,44,31,.78))}
+body[data-theme="dark"] .audio-gate{
+  border:1px solid rgba(246,215,123,.22);
+  background:
+    radial-gradient(600px 200px at 30% 0%, rgba(47,99,255,.18), transparent 60%),
+    radial-gradient(600px 200px at 70% 0%, rgba(255,123,212,.16), transparent 60%),
+    linear-gradient(180deg, rgba(5,10,7,.78), rgba(5,10,7,.52));
+  box-shadow: 0 24px 70px rgba(0,0,0,.38);
+}
+body[data-theme="dark"] .audio-gate-btn{
+  border:1px solid rgba(246,215,123,.28);
+  background:
+    radial-gradient(520px 180px at 30% 0%, rgba(68,255,210,.14), transparent 60%),
+    radial-gradient(520px 180px at 70% 0%, rgba(255,123,212,.14), transparent 60%),
+    linear-gradient(180deg, rgba(27,106,69,.40), rgba(10,32,23,.55));
+  color:rgba(255,249,239,.95);
+}
+body[data-theme="dark"] .card{
+  background:
+    radial-gradient(900px 520px at 50% -12%, rgba(68,255,210,.24), transparent 60%),
+    radial-gradient(900px 620px at 50% 118%, rgba(255,207,74,.24), transparent 60%),
+    radial-gradient(980px 600px at 12% 18%, rgba(47,99,255,.22), transparent 62%),
+    radial-gradient(980px 600px at 88% 16%, rgba(155,107,255,.22), transparent 62%),
+    radial-gradient(900px 520px at 50% 22%, rgba(255,123,212,.18), transparent 62%),
+    radial-gradient(820px 520px at 18% 72%, rgba(183,255,74,.12), transparent 62%),
+    linear-gradient(180deg, rgba(24,132,92,.72), rgba(7,18,14,.94));
+  box-shadow:
+    0 46px 140px rgba(0,0,0,.58),
+    0 0 0 1px rgba(246,215,123,.22) inset,
+    0 0 120px rgba(68,255,210,.06);
+}
+body[data-theme="dark"] .card::before{
+  background:
+    conic-gradient(from 120deg,
+      transparent 0 12%,
+      rgba(246,215,123,.16) 12% 14%,
+      transparent 14% 25%,
+      rgba(60,230,179,.10) 25% 27%,
+      transparent 27% 38%,
+      rgba(246,215,123,.14) 38% 40%,
+      transparent 40% 100%);
+}
+body[data-theme="dark"] .card::after{
+  background:
+    radial-gradient(900px 520px at 20% 0%, rgba(47,99,255,.16), transparent 62%),
+    radial-gradient(900px 520px at 80% 0%, rgba(255,123,212,.16), transparent 62%),
+    radial-gradient(800px 420px at 50% 0%, rgba(246,215,123,.22), transparent 62%),
+    radial-gradient(760px 520px at 50% 110%, rgba(246,215,123,.12), transparent 64%),
+    repeating-linear-gradient(90deg, rgba(246,215,123,.09) 0 1px, transparent 1px 22px),
+    repeating-linear-gradient(0deg, rgba(246,215,123,.08) 0 1px, transparent 1px 22px);
+  opacity:.11;
+}
+body[data-theme="dark"] .card-border{
+  border:1px solid rgba(246,215,123,.32);
+  box-shadow: 0 0 0 1px rgba(246,215,123,.10) inset, 0 0 0 10px rgba(5,10,7,.20) inset;
+}
+body[data-theme="dark"] .card-border::before{border:1px solid rgba(246,215,123,.18)}
+body[data-theme="dark"] .label-786{color:rgba(246,215,123,.95);text-shadow: 0 8px 30px rgba(0,0,0,.35)}
+body[data-theme="dark"] .bismillah{color:#fff;text-shadow: 0 0 40px rgba(246,215,123,.18), 0 10px 26px rgba(0,0,0,.36)}
+body[data-theme="dark"] .tagline{
+  border-top:1px solid rgba(246,215,123,.18);
+  border-bottom:1px solid rgba(246,215,123,.18);
+  background: linear-gradient(90deg, rgba(246,215,123,.06), transparent 30%, transparent 70%, rgba(246,215,123,.06));
+}
+body[data-theme="dark"] .shayari{color:rgba(245,241,230,.92)}
+body[data-theme="dark"] .tagline .micro{color:rgba(246,215,123,.72)}
+body[data-theme="dark"] .panel{border:1px solid rgba(246,215,123,.16)}
+body[data-theme="dark"] .panel{
+  background:
+    radial-gradient(420px 220px at 20% 0%, rgba(47,99,255,.08), transparent 62%),
+    radial-gradient(420px 220px at 80% 0%, rgba(255,123,212,.08), transparent 62%),
+    linear-gradient(180deg, rgba(10,32,23,.62), rgba(5,10,7,.14));
+}
+body[data-theme="dark"] .panel-header{border-bottom:1px solid rgba(246,215,123,.14)}
+body[data-theme="dark"] .panel-header::after{color:rgba(246,215,123,.86);background: rgba(10,32,23,.92);border:1px solid rgba(246,215,123,.14)}
+body[data-theme="dark"] .panel-title{color:rgba(246,215,123,.92)}
+body[data-theme="dark"] .panel-list li{color:rgba(245,241,230,.82)}
+body[data-theme="dark"] .allah-wrap{
+  background:
+    radial-gradient(circle at 50% 50%, rgba(246,215,123,.12), transparent 62%),
+    radial-gradient(circle at 50% 55%, rgba(60,230,179,.10), transparent 62%);
+}
+body[data-theme="dark"] .allah-wrap::before{
+  background:
+    conic-gradient(from 0deg,
+      rgba(246,215,123,.00),
+      rgba(255,207,74,.30),
+      rgba(68,255,210,.18),
+      rgba(47,99,255,.18),
+      rgba(155,107,255,.18),
+      rgba(255,123,212,.16),
+      rgba(255,207,74,.20),
+      rgba(246,215,123,.00));
+}
+body[data-theme="dark"] .allah-wrap::after{
+  background: radial-gradient(circle at 50% 50%, rgba(246,215,123,.22), transparent 66%);
+}
+body[data-theme="dark"] .allah{color:rgba(255,243,227,.96);text-shadow: 0 18px 46px rgba(0,0,0,.45), 0 0 34px rgba(255,123,212,.12), 0 0 44px rgba(47,99,255,.10)}
+body[data-theme="dark"] .headline{color:rgba(245,241,230,.78)}
+body[data-theme="dark"] .invite-quote{color:rgba(245,241,230,.72)}
+body[data-theme="dark"] .invite-quote .label-ur{color:rgba(246,215,123,.88)}
+body[data-theme="dark"] .person{border:1px solid rgba(246,215,123,.16);background: linear-gradient(180deg, rgba(246,215,123,.07), transparent)}
+body[data-theme="dark"] .person-name{color:#fff}
+body[data-theme="dark"] .person-sub{color:rgba(246,215,123,.72)}
+body[data-theme="dark"] .divider .line{background: linear-gradient(to right, transparent, rgba(246,215,123,.32), transparent)}
+body[data-theme="dark"] .divider .gem{color:rgba(246,215,123,.82)}
+body[data-theme="dark"] .venue{border-top:1px solid rgba(246,215,123,.16)}
+body[data-theme="dark"] .venue .label{color:rgba(246,215,123,.90)}
+body[data-theme="dark"] .schedule{border:1px solid rgba(246,215,123,.16);background: linear-gradient(180deg, rgba(47,99,255,.06), rgba(10,32,23,.18))}
+body[data-theme="dark"] .schedule-label{color:rgba(246,215,123,.86)}
+body[data-theme="dark"] .schedule-value{color:rgba(245,241,230,.88)}
+body[data-theme="dark"] .schedule-value .label-en{color:rgba(245,241,230,.80)}
+body[data-theme="dark"] .schedule-value .label-ur{color:rgba(245,241,230,.88)}
+body[data-theme="dark"] .venue .address{color:rgba(245,241,230,.88)}
+body[data-theme="dark"] .venue .address .label-ur{color:rgba(245,241,230,.88)}
+body[data-theme="dark"] .map-btn{
+  border:1px solid rgba(246,215,123,.28);
+  background:
+    radial-gradient(240px 120px at 20% 0%, rgba(47,99,255,.16), transparent 60%),
+    radial-gradient(240px 120px at 80% 0%, rgba(139,92,246,.16), transparent 60%),
+    linear-gradient(180deg, rgba(60,230,179,.12), rgba(10,32,23,.42));
+  color:rgba(245,241,230,.92);
+}
+body[data-theme="dark"] .map-btn:hover{border-color: rgba(246,215,123,.44)}
+body[data-theme="dark"] .footer-stars{color:rgba(246,215,123,.62)}
+body[data-theme="dark"] .hl{color:#fff}
+
+@media (max-width: 640px){
+  .panel-list{
+    columns:2;
+    column-gap:12px;
+    text-align:left;
+  }
+  .panel-list li{
+    break-inside:avoid;
+    font-size:13px;
+    line-height:1.85;
+  }
+  .person-name{font-size:24px}
+  .headline{font-size:12px;letter-spacing:4px}
+  .person-sub{font-size:9px;letter-spacing:2px}
+  .schedule-value{font-size:14px}
+  .venue .address{font-size:14px}
+}
+@media (max-width: 420px){
+  .panel-list{columns:1;text-align:center}
+  .bismillah{font-size:30px}
+  .shayari{font-size:15px}
+}
 
 @media (max-width: 860px){
   .grid3{

@@ -2,13 +2,16 @@ const card = document.getElementById("invitationCard");
 const faces = card.querySelector(".card-faces");
 const btnEn = document.getElementById("btnEn");
 const btnUr = document.getElementById("btnUr");
+const btnTheme = document.getElementById("btnTheme");
 const btnAudio = document.getElementById("btnAudio");
 const btnPrint = document.getElementById("btnPrint");
 const naatAudio = document.getElementById("naatAudio");
 const audioGate = document.getElementById("audioGate");
 const audioGateBtn = document.getElementById("audioGateBtn");
+const themeMeta = document.querySelector('meta[name="theme-color"]');
 
 let audioEnabled = true;
+let currentTheme = document.body?.dataset?.theme || "dark";
 
 function setLang(lang) {
   const next = lang === "ur" ? "ur" : "en";
@@ -24,6 +27,27 @@ btnUr.addEventListener("click", () => setLang("ur"));
 btnPrint.addEventListener("click", () => window.print());
 
 setLang("en");
+
+function setTheme(nextTheme) {
+  const next = nextTheme === "light" ? "light" : "dark";
+  currentTheme = next;
+  if (document.body) document.body.dataset.theme = next;
+  if (btnTheme) {
+    btnTheme.setAttribute("aria-pressed", String(next === "dark"));
+    btnTheme.textContent = next === "dark" ? "Theme: Dark" : "Theme: Light";
+  }
+  if (themeMeta) {
+    themeMeta.setAttribute("content", next === "dark" ? "#07150f" : "#f3eee3");
+  }
+}
+
+if (btnTheme) {
+  btnTheme.addEventListener("click", () => {
+    setTheme(currentTheme === "dark" ? "light" : "dark");
+  });
+}
+
+setTheme(currentTheme);
 
 function updateAudioUI() {
   if (!btnAudio) return;
