@@ -1,362 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#07150f">
-    <title>Wedding Invitation – Taj Mohammad Khan &amp; Momina Khatoon</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07150f" />
+  <title>Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+<body data-theme="dark" data-lang="en">
+  <div class="bg-anim" aria-hidden="true"></div>
+  <div class="sparkles" aria-hidden="true"></div>
 
-<body data-theme="dark">
-    <div class="app">
-        <header class="topbar">
-            <div class="brand" aria-label="Walima invitation controls">
-                <div class="b1">دعوتِ ولیمہ</div>
-                <div class="b2">Walima Invitation</div>
-            </div>
-            <div class="controls">
-                <button class="chip" id="btnEn" type="button" aria-pressed="true">English</button>
-                <button class="chip" id="btnUr" type="button" aria-pressed="false"><span
-                        class="urdu">اردو</span></button>
-                <button class="chip" id="btnTheme" type="button" aria-pressed="true">Theme: Dark</button>
-                <button class="chip" id="btnAudio" type="button" aria-pressed="true">Naat: On</button>
-                <button class="chip chip-primary" id="btnPrint" type="button">Download / Print</button>
-            </div>
-        </header>
-
-        <main class="stage">
-            <article class="card" id="invitationCard" data-lang="en">
-                <div class="card-border" aria-hidden="true"></div>
-
-                <div class="card-faces">
-                    <!-- ENGLISH FACE -->
-                    <section class="card-face face-en" data-face="en">
-                        <div class="content">
-                            <div class="header">
-                                <div class="arch" aria-hidden="true">
-                                    <svg viewBox="0 0 440 220" xmlns="http://www.w3.org/2000/svg">
-                                        <defs>
-                                            <linearGradient id="archGold" x1="0" x2="1">
-                                                <stop offset="0" stop-color="rgba(246,215,123,0.18)" />
-                                                <stop offset="0.5" stop-color="rgba(246,215,123,0.55)" />
-                                                <stop offset="1" stop-color="rgba(246,215,123,0.18)" />
-                                            </linearGradient>
-                                        </defs>
-                                        <path d="M20 210 L20 110 C20 40 105 12 220 12 C335 12 420 40 420 110 L420 210"
-                                            fill="none" stroke="url(#archGold)" stroke-width="2" />
-                                        <path d="M36 208 L36 111 C36 50 112 20 220 20 C328 20 404 50 404 111 L404 208"
-                                            fill="none" stroke="rgba(246,215,123,0.38)" stroke-width="1" />
-                                        <ellipse cx="220" cy="8" rx="13" ry="10" fill="rgba(184,144,42,0.75)"
-                                            stroke="rgba(246,215,123,0.95)" stroke-width="1.2" />
-                                        <polygon
-                                            points="220,-1 222,5 229,5 224,9 226,15 220,11 214,15 216,9 211,5 218,5"
-                                            fill="rgba(246,215,123,0.95)" opacity="0.95" />
-                                        <rect x="14" y="194" width="14" height="16" rx="2"
-                                            fill="rgba(184,144,42,0.85)" />
-                                        <rect x="412" y="194" width="14" height="16" rx="2"
-                                            fill="rgba(184,144,42,0.85)" />
-                                        <line x1="36" y1="160" x2="404" y2="160" stroke="rgba(246,215,123,0.22)"
-                                            stroke-width="0.8" />
-                                        <circle cx="220" cy="40" r="3" fill="rgba(246,215,123,0.28)" />
-                                        <circle cx="220" cy="55" r="2" fill="rgba(246,215,123,0.20)" />
-                                    </svg>
-                                    <div class="arch-text">
-                                        <div class="label-786">✦ 786 ✦</div>
-                                        <div class="bismillah">بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tagline">
-                                <div class="shayari">Allah ka karam hai, inayat-e-Rasool ki,</div>
-                                <div class="shayari">Shaadi hamare ghar hai, barkat-e-Rasool ki.</div>
-                                <div class="shayari">Umeed hai ke aap bhi tashreef laayenge,</div>
-                                <div class="shayari">Dawat qubool karna hai sunnat-e-Rasool ki</div>
-                                <div class="micro">Your presence is requested</div>
-                            </div>
-
-                            <div class="grid3">
-                                <aside class="panel panel-rel panel-rel-left">
-                                    <div class="panel-header">
-                                        <div class="panel-title"><span class="label-en">Relatives</span><span class="label-ur">رشتہ دار</span></div>
-                                    </div>
-                                    <ul class="panel-list">
-                                        <li>Badrudduja Khan</li>
-                                        <li>Noorulhuda Khan</li>
-                                        <li>Idulhuda Khan</li>
-                                        <li>Anwarulhuda Khan</li>
-                                        <li>HidayatAli Khan</li>
-                                        <li>AhmedAli Khan</li>
-                                        <li>Baitullah Khan</li>
-                                        <li>Nisar Khan</li>
-                                        <li>Hiyatullah Khan</li>
-                                        <li>Hidayatullah Khan</li>
-                                        <li>Munawwar khan</li>
-                                        <li>Ramzan Khan</li>
-                                        <li>RizwanAli Khan</li>
-                                        <li>Arman Khan</li>
-                                        <li>Sufiyan Khan</li>
-                                        <li>Rajab Khan</li>
-                                        <li>Usman Khan</li>
-                                    </ul>
-                                </aside>
-
-                                <section class="panel center panel-center">
-                                    <div class="allah-center">
-                                        <div class="allah-wrap" aria-hidden="true"></div>
-                                        <div class="allah" aria-label="Allah in Arabic">اللَّه</div>
-                                    </div>
-                                    <div class="headline"><span class="label-en">Walima Invitation</span><span class="label-ur">دعوتِ ولیمہ</span></div>
-                                    <div class="invite-quote">
-                                        <span class="label-en">You are invited by <span class="hl">Badrudduja Khan</span>.</span>
-                                        <span class="label-ur" dir="rtl" lang="ur">آپ کو <span class="hl">بدرالدجا خان</span> کی جانب سے دعوت ہے۔</span>
-                                    </div>
-
-                                    <div class="person">
-                                        <span class="person-name"><span class="label-en">Taj Mohammad Khan</span><span class="label-ur">تاج محمد خان</span></span>
-                                        <span class="person-sub"><span class="label-en">S/o : Badrudduja Khan</span><span class="label-ur">فرزند : بدرالدجا خان</span></span>
-                                    </div>
-
-                                    <div class="divider" aria-hidden="true">
-                                        <div class="line"></div>
-                                        <div class="gem"><span>✦</span><span class="moon">◈</span><span>✦</span></div>
-                                        <div class="line"></div>
-                                    </div>
-
-                                    <div class="divider" aria-hidden="true">
-                                        <div class="line"></div>
-                                        <div class="gem"><span>☽</span><span class="moon">✦</span><span>☾</span></div>
-                                        <div class="line"></div>
-                                    </div>
-
-                                    <div class="person">
-                                        <span class="person-name"><span class="label-en">Momina Khatoon</span><span class="label-ur">مومنہ خاتون</span></span>
-                                        <span class="person-sub"><span class="label-en">D/o : Shafa&apos;at Ali</span><span class="label-ur">دختر : شفاعت علی</span></span>
-                                    </div>
-                                </section>
-
-                                <aside class="panel panel-rel panel-rel-right">
-                                    <div class="panel-header">
-                                        <div class="panel-title"><span class="label-en">Relatives</span><span class="label-ur">رشتہ دار</span></div>
-                                    </div>
-                                    <ul class="panel-list">
-                                        <li>Nisar Khan</li>
-                                        <li>Ahmad Khan</li>
-                                        <li>Jamaluddin khan</li>
-                                        <li>Abdulhaq Khan</li>
-                                        <li>Zakaullah Khan</li>
-                                        <li>Irfan Khan</li>
-                                        <li>Imran Khan</li>
-                                        <li>Salman Khan</li>
-                                        <li>Javed Khan</li>
-                                        <li>Jakir Khan</li>
-                                        <li>Firoz Khan</li>
-                                        <li>Rafeeq Khan</li>
-                                        <li>Guddu Khan</li>
-                                        <li>Azam Khan</li>
-                                        <li>Musarraf Khan</li>
-                                        <li>Akhtar Khan</li>
-                                        <li>Irfan Khan</li>
-                                        <li>Shahban Khan</li>
-                                        <li>Sufiyan Khan</li>
-                                    </ul>
-                                </aside>
-                            </div>
-
-                            <div class="venue">
-                                <div class="label"><span class="label-en">✦ Venue ✦</span><span class="label-ur">مقام</span></div>
-                                <div class="schedule" aria-label="Date and time">
-                                    <div class="schedule-label"><span class="label-en">Date &amp; Time</span><span class="label-ur">تاریخ و وقت</span></div>
-                                    <div class="schedule-value">
-                                        <span class="label-en">After Maghrib Salah</span>
-                                        <span class="label-ur" dir="rtl" lang="ur">بعد نمازِ عشاء</span>
-                                    </div>
-                                </div>
-                                <p class="address">
-                                    <span class="label-en"><span class="hl">Rosary School</span>, Near <span class="hl">Jhadu Company</span>, Damber Plant, Rajawali, <span class="hl">Vasai East</span></span>
-                                    <span class="label-ur" dir="rtl" lang="ur"><span class="hl">روذری اسکول</span>، نزدیک <span class="hl">جھاڑو کمپنی</span>، ڈمبر پلانٹ، رجاؤلی، <span class="hl">وسئی ایسٹ</span></span>
-                                </p>
-                                <a class="map-btn" href="https://maps.app.goo.gl/qFDw4ToFiQkPGLsq9" target="_blank"
-                                    rel="noopener noreferrer"><span class="label-en">Location Online</span><span
-                                        class="label-ur">لوکیشن آن لائن</span></a>
-                                <div class="footer-stars" aria-hidden="true">✦ ✦ ✦</div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- URDU FACE -->
-                    <section class="card-face face-ur" data-face="ur" dir="rtl" lang="ur">
-                        <div class="content">
-                            <div class="header">
-                                <div class="arch" aria-hidden="true">
-                                    <svg viewBox="0 0 440 220" xmlns="http://www.w3.org/2000/svg">
-                                        <defs>
-                                            <linearGradient id="archGold2" x1="0" x2="1">
-                                                <stop offset="0" stop-color="rgba(246,215,123,0.18)" />
-                                                <stop offset="0.5" stop-color="rgba(246,215,123,0.55)" />
-                                                <stop offset="1" stop-color="rgba(246,215,123,0.18)" />
-                                            </linearGradient>
-                                        </defs>
-                                        <path d="M20 210 L20 110 C20 40 105 12 220 12 C335 12 420 40 420 110 L420 210"
-                                            fill="none" stroke="url(#archGold2)" stroke-width="2" />
-                                        <path d="M36 208 L36 111 C36 50 112 20 220 20 C328 20 404 50 404 111 L404 208"
-                                            fill="none" stroke="rgba(246,215,123,0.38)" stroke-width="1" />
-                                        <ellipse cx="220" cy="8" rx="13" ry="10" fill="rgba(184,144,42,0.75)"
-                                            stroke="rgba(246,215,123,0.95)" stroke-width="1.2" />
-                                        <polygon
-                                            points="220,-1 222,5 229,5 224,9 226,15 220,11 214,15 216,9 211,5 218,5"
-                                            fill="rgba(246,215,123,0.95)" opacity="0.95" />
-                                        <rect x="14" y="194" width="14" height="16" rx="2"
-                                            fill="rgba(184,144,42,0.85)" />
-                                        <rect x="412" y="194" width="14" height="16" rx="2"
-                                            fill="rgba(184,144,42,0.85)" />
-                                        <line x1="36" y1="160" x2="404" y2="160" stroke="rgba(246,215,123,0.22)"
-                                            stroke-width="0.8" />
-                                        <circle cx="220" cy="40" r="3" fill="rgba(246,215,123,0.28)" />
-                                        <circle cx="220" cy="55" r="2" fill="rgba(246,215,123,0.20)" />
-                                    </svg>
-                                    <div class="arch-text">
-                                        <div class="label-786">✦ 786 ✦</div>
-                                        <div class="bismillah">بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tagline">
-                                <div class="shayari">اللّٰہ کا کرم ہے، عنایتِ رسول کی،</div>
-                                <div class="shayari">شادی ہمارے گھر ہے، برکتِ رسول کی۔</div>
-                                <div class="shayari">امید ہے کہ آپ بھی تشریف لائیں گے،</div>
-                                <div class="shayari">دعوت قبول کرنا ہے سنتِ رسول کی</div>
-                                <div class="micro">دعوتِ ولیمہ</div>
-                            </div>
-
-                            <div class="grid3">
-                                <aside class="panel panel-rel panel-rel-left">
-                                    <div class="panel-header">
-                                        <div class="panel-title"><span class="label-en">Relatives</span><span class="label-ur">رشتہ دار</span></div>
-                                    </div>
-                                    <ul class="panel-list">
-                                        <li>Badrudduja Khan</li>
-                                        <li>Noorulhuda Khan</li>
-                                        <li>Idulhuda Khan</li>
-                                        <li>Anwarulhuda Khan</li>
-                                        <li>HidayatAli Khan</li>
-                                        <li>AhmedAli Khan</li>
-                                        <li>Baitullah Khan</li>
-                                        <li>Nisar Khan</li>
-                                        <li>Hiyatullah Khan</li>
-                                        <li>Hidayatullah Khan</li>
-                                        <li>Munawwar khan</li>
-                                        <li>Ramzan Khan</li>
-                                        <li>RizwanAli Khan</li>
-                                        <li>Arman Khan</li>
-                                        <li>Sufiyan Khan</li>
-                                        <li>Rajab Khan</li>
-                                        <li>Usman Khan</li>
-                                    </ul>
-                                </aside>
-
-                                <section class="panel center panel-center">
-                                    <div class="allah-center">
-                                        <div class="allah-wrap" aria-hidden="true"></div>
-                                        <div class="allah" aria-label="Allah in Arabic">اللَّه</div>
-                                    </div>
-                                    <div class="headline"><span class="label-en">Walima Invitation</span><span class="label-ur">دعوتِ ولیمہ</span></div>
-                                    <div class="invite-quote">
-                                        <span class="label-en">You are invited by <span class="hl">Badrudduja Khan</span>.</span>
-                                        <span class="label-ur" dir="rtl" lang="ur">آپ کو <span class="hl">بدرالدجا خان</span> کی جانب سے دعوت ہے۔</span>
-                                    </div>
-
-                                    <div class="person">
-                                        <span class="person-name"><span class="label-en">Taj Mohammad Khan</span><span class="label-ur">تاج محمد خان</span></span>
-                                        <span class="person-sub"><span class="label-en">S/o : Badrudduja Khan</span><span class="label-ur">فرزند : بدرالدجا خان</span></span>
-                                    </div>
-
-                                    <div class="divider" aria-hidden="true">
-                                        <div class="line"></div>
-                                        <div class="gem"><span>✦</span><span class="moon">◈</span><span>✦</span></div>
-                                        <div class="line"></div>
-                                    </div>
-
-                                    <div class="divider" aria-hidden="true">
-                                        <div class="line"></div>
-                                        <div class="gem"><span>☽</span><span class="moon">✦</span><span>☾</span></div>
-                                        <div class="line"></div>
-                                    </div>
-
-                                    <div class="person">
-                                        <span class="person-name"><span class="label-en">Momina Khatoon</span><span class="label-ur">مومنہ خاتون</span></span>
-                                        <span class="person-sub"><span class="label-en">D/o : Shafa&apos;at Ali</span><span class="label-ur">دختر : شفاعت علی</span></span>
-                                    </div>
-                                </section>
-
-                                <aside class="panel panel-rel panel-rel-right">
-                                    <div class="panel-header">
-                                        <div class="panel-title"><span class="label-en">Relatives</span><span class="label-ur">رشتہ دار</span></div>
-                                    </div>
-                                    <ul class="panel-list">
-                                        <li>Nisar Khan</li>
-                                        <li>Ahmad Khan</li>
-                                        <li>Jamaluddin khan</li>
-                                        <li>Abdulhaq Khan</li>
-                                        <li>Zakaullah Khan</li>
-                                        <li>Irfan Khan</li>
-                                        <li>Imran Khan</li>
-                                        <li>Salman Khan</li>
-                                        <li>Javed Khan</li>
-                                        <li>Jakir Khan</li>
-                                        <li>Firoz Khan</li>
-                                        <li>Rafeeq Khan</li>
-                                        <li>Guddu Khan</li>
-                                        <li>Azam Khan</li>
-                                        <li>Musarraf Khan</li>
-                                        <li>Akhtar Khan</li>
-                                        <li>Irfan Khan</li>
-                                        <li>Shahban Khan</li>
-                                        <li>Sufiyan Khan</li>
-                                    </ul>
-                                </aside>
-                            </div>
-
-                            <div class="venue">
-                                <div class="label"><span class="label-en">✦ Venue ✦</span><span class="label-ur">مقام</span></div>
-                                <div class="schedule" aria-label="تاریخ اور وقت">
-                                    <div class="schedule-label"><span class="label-en">Date &amp; Time</span><span class="label-ur">تاریخ و وقت</span></div>
-                                    <div class="schedule-value">
-                                        <span class="label-en">After Maghrib Salah</span>
-                                        <span class="label-ur" dir="rtl" lang="ur">بعد نمازِ عشاء</span>
-                                    </div>
-                                </div>
-                                <p class="address">
-                                    <span class="label-en"><span class="hl">Rosary School</span>, Near <span class="hl">Jhadu Company</span>, Damber Plant, Rajawali, <span class="hl">Vasai East</span></span>
-                                    <span class="label-ur" dir="rtl" lang="ur"><span class="hl">روذری اسکول</span>، نزدیک <span class="hl">جھاڑو کمپنی</span>، ڈمبر پلانٹ، رجاؤلی، <span class="hl">وسئی ایسٹ</span></span>
-                                </p>
-                                <a class="map-btn" href="https://maps.app.goo.gl/qFDw4ToFiQkPGLsq9" target="_blank"
-                                    rel="noopener noreferrer"><span class="label-en">Location Online</span><span
-                                        class="label-ur">لوکیشن آن لائن</span></a>
-                                <div class="footer-stars" aria-hidden="true">✦ ✦ ✦</div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </article>
-        </main>
+  <header class="topbar" id="topbar">
+    <button class="menu-btn" id="btnMenu" type="button" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="brand">
+      <div class="brand-title">Wedding Invitation</div>
+      <div class="brand-sub">دعوتِ ولیمہ</div>
     </div>
+  </header>
 
-    <script src="script.js" defer></script>
-    <audio id="naatAudio" preload="auto" playsinline autoplay>
-        <source src="naat.mp3" type="audio/mpeg">
-    </audio>
-    <div class="audio-gate" id="audioGate" hidden>
-        <button class="audio-gate-btn" id="audioGateBtn" type="button">Tap to Play Naat</button>
+  <div class="menu-backdrop" id="menuBackdrop" hidden></div>
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-header">Menu</div>
+    <div class="mobile-menu-actions">
+      <button class="chip" id="btnTheme" type="button" aria-pressed="true">Theme: Dark</button>
+      <button class="chip" id="btnLang" type="button" aria-pressed="false">Language: English</button>
+      <button class="chip" id="btnAudio" type="button" aria-pressed="true">Naat: On</button>
+      <button class="chip" id="btnCopy" type="button">Copy Invite</button>
     </div>
+  </aside>
+
+  <main class="stage">
+    <article class="card" id="invitationCard">
+      <div class="card-glow" aria-hidden="true"></div>
+      <div class="card-inner">
+        <div class="save-date" aria-hidden="true">Save the Date</div>
+
+        <div class="spiritual">
+          <div class="label-786">✦ 786 ✦</div>
+          <div class="bismillah">بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</div>
+          <div class="allah-wrap" aria-hidden="true"></div>
+          <div class="allah">اللَّه</div>
+        </div>
+
+        <div class="title">
+          <span class="label-en">Wedding Invitation</span>
+          <span class="label-ur">دعوتِ ولیمہ</span>
+        </div>
+
+        <div class="names">
+          <span class="label-en">Taj Mohammad Khan</span>
+          <span class="label-ur">تاج محمد خان</span>
+        </div>
+        <div class="parents">
+            <div class="row">
+                <span class="label-en">S/o: Badrudduja Khan</span>
+                <span class="label-ur">فرزند: بدرالدجا خان</span>
+            </div>
+        </div>
+        <div class="and">✦</div>
+        <div class="names">
+          <span class="label-en">Momina Khatoon</span>
+          <span class="label-ur">مومنہ خاتون</span>
+        </div>
+
+        <div class="parents">
+          <div class="row">
+            <span class="label-en">D/o: Shafa'at Ali</span>
+            <span class="label-ur">دختر: شفاعت علی</span>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+          <div class="section-title">
+            <span class="label-en">Date & Time</span>
+            <span class="label-ur">تاریخ و وقت</span>
+          </div>
+          <div class="section-value">
+            <span class="label-en">After Maghrib Salah</span>
+            <span class="label-ur">بعد نمازِ عشاء</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">
+            <span class="label-en">Venue</span>
+            <span class="label-ur">مقام</span>
+          </div>
+          <div class="section-value">
+            <span class="label-en">Rosary School, Near Jhadu Company, Damber Plant, Rajawali, Vasai East</span>
+            <span class="label-ur">روذری اسکول، نزدیک جھاڑو کمپنی، ڈمبر پلانٹ، رجاؤلی، وسئی ایسٹ</span>
+          </div>
+        </div>
+
+        <div class="message">
+          <span class="label-en">We request the honor of your presence to celebrate this blessed union.</span>
+          <span class="label-ur">آپ کی تشریف آوری ہمارے لئے باعثِ سعادت ہوگی۔</span>
+        </div>
+
+        <div class="shayari-box">
+          <div class="shayari">
+            <div class="label-en">Allah ka karam hai, inayat-e-Rasool ki,</div>
+            <div class="label-en">Shaadi hamare ghar hai, barkat-e-Rasool ki.</div>
+            <div class="label-en">Umeed hai ke aap bhi tashreef laayenge,</div>
+            <div class="label-en">Dawat qubool karna hai sunnat-e-Rasool ki</div>
+
+            <div class="label-ur">اللّٰہ کا کرم ہے، عنایتِ رسول کی،</div>
+            <div class="label-ur">شادی ہمارے گھر ہے، برکتِ رسول کی۔</div>
+            <div class="label-ur">امید ہے کہ آپ بھی تشریف لائیں گے،</div>
+            <div class="label-ur">دعوت قبول کرنا ہے سنتِ رسول کی</div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <button class="cta" id="btnShare" type="button">Share Invite</button>
+        </div>
+      </div>
+    </article>
+
+    <section class="relatives-section relatives-outside">
+      <div class="section-title">
+        <span class="label-en">With Blessings / Family &amp; Relatives</span>
+        <span class="label-ur">دعاؤں کے ساتھ / خاندان و رشتہ دار</span>
+      </div>
+      <div class="relatives-grid">
+        <div class="rel-box">
+          <div class="rel-title">
+            <span class="label-en">From Relatives</span>
+            <span class="label-ur">داماد کی طرف سے</span>
+          </div>
+          <ul class="relatives-list">
+            <li><span class="label-en">Badrudduja Khan</span><span class="label-ur">بدرالدجا خان</span></li>
+            <li><span class="label-en">Noorulhuda Khan</span><span class="label-ur">نورالہدیٰ خان</span></li>
+            <li><span class="label-en">Idulhuda Khan</span><span class="label-ur">عیدالہدیٰ خان</span></li>
+            <li><span class="label-en">Anwarulhuda Khan</span><span class="label-ur">انورالہدیٰ خان</span></li>
+            <li><span class="label-en">HidayatAli Khan</span><span class="label-ur">ہدایت علی خان</span></li>
+            <li><span class="label-en">AhmedAli Khan</span><span class="label-ur">احمد علی خان</span></li>
+            <li><span class="label-en">Baitullah Khan</span><span class="label-ur">بیت اللہ خان</span></li>
+            <li><span class="label-en">Nisar Khan</span><span class="label-ur">نثار خان</span></li>
+            <li><span class="label-en">Hiyatullah Khan</span><span class="label-ur">حیات اللہ خان</span></li>
+            <li><span class="label-en">Hidayatullah Khan</span><span class="label-ur">ہدایت اللہ خان</span></li>
+            <li><span class="label-en">Munawwar khan</span><span class="label-ur">منور خان</span></li>
+            <li><span class="label-en">Ramzan Khan</span><span class="label-ur">رمضان خان</span></li>
+            <li><span class="label-en">RizwanAli Khan</span><span class="label-ur">رضوان علی خان</span></li>
+            <li><span class="label-en">Arman Khan</span><span class="label-ur">ارمان خان</span></li>
+            <li><span class="label-en">Sufiyan Khan</span><span class="label-ur">سفیان خان</span></li>
+            <li><span class="label-en">Rajab Khan</span><span class="label-ur">رجب خان</span></li>
+            <li><span class="label-en">Usman Khan</span><span class="label-ur">عثمان خان</span></li>
+          </ul>
+        </div>
+        <div class="rel-box">
+          <div class="rel-title">
+            <span class="label-en">From Relatives</span>
+            <span class="label-ur">دلہن کی طرف سے</span>
+          </div>
+          <ul class="relatives-list">
+            <li><span class="label-en">Nisar Khan</span><span class="label-ur">نثار خان</span></li>
+            <li><span class="label-en">Ahmad Khan</span><span class="label-ur">احمد خان</span></li>
+            <li><span class="label-en">Jamaluddin khan</span><span class="label-ur">جمال الدین خان</span></li>
+            <li><span class="label-en">Abdulhaq Khan</span><span class="label-ur">عبدالحق خان</span></li>
+            <li><span class="label-en">Zakaullah Khan</span><span class="label-ur">زکاءاللہ خان</span></li>
+            <li><span class="label-en">Irfan Khan</span><span class="label-ur">عرفان خان</span></li>
+            <li><span class="label-en">Imran Khan</span><span class="label-ur">عمران خان</span></li>
+            <li><span class="label-en">Salman Khan</span><span class="label-ur">سلمان خان</span></li>
+            <li><span class="label-en">Javed Khan</span><span class="label-ur">جاوید خان</span></li>
+            <li><span class="label-en">Jakir Khan</span><span class="label-ur">ذاکر خان</span></li>
+            <li><span class="label-en">Firoz Khan</span><span class="label-ur">فیروز خان</span></li>
+            <li><span class="label-en">Rafeeq Khan</span><span class="label-ur">رفیق خان</span></li>
+            <li><span class="label-en">Guddu Khan</span><span class="label-ur">گڈو خان</span></li>
+            <li><span class="label-en">Azam Khan</span><span class="label-ur">اعظم خان</span></li>
+            <li><span class="label-en">Musarraf Khan</span><span class="label-ur">مشرف خان</span></li>
+            <li><span class="label-en">Akhtar Khan</span><span class="label-ur">اختر خان</span></li>
+            <li><span class="label-en">Irfan Khan</span><span class="label-ur">عرفان خان</span></li>
+            <li><span class="label-en">Shahban Khan</span><span class="label-ur">شہبان خان</span></li>
+            <li><span class="label-en">Sufiyan Khan</span><span class="label-ur">سفیان خان</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <audio id="naatAudio" preload="auto" playsinline loop>
+    <source src="naat.mp3" type="audio/mpeg" />
+  </audio>
+  <div class="audio-gate" id="audioGate" hidden>
+    <button class="audio-gate-btn" id="audioGateBtn" type="button">Tap to Play Naat</button>
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
-
 </html>
