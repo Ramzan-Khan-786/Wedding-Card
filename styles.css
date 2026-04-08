@@ -385,6 +385,55 @@ body::before{
   pointer-events:none;
   animation: royalHalo 4.8s ease-in-out infinite;
 }
+
+/* ─────────────────────────────────────────────────────────────
+   SPINNING STICK RINGS  –  SVG canvas approach
+   Each .spin-ring is a position:absolute SVG element that
+   orbits around the Allah centre.  We use separate animation
+   durations and directions so the rings never feel in sync.
+   ───────────────────────────────────────────────────────────── */
+
+/* Container that every spin-ring is placed inside */
+.spin-rings-wrap{
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:0;
+  height:0;
+  pointer-events:none;
+  z-index:2;
+}
+
+/* Each ring SVG element – centred via negative translate */
+.spin-ring{
+  position:absolute;
+  top:0;
+  left:0;
+  /* centred on the container origin */
+  transform-origin: 0px 0px;
+  will-change: transform;
+  pointer-events:none;
+}
+
+/* Individual ring animation speeds & directions */
+.spin-ring-1{
+  animation: spinCW 18s linear infinite;
+}
+.spin-ring-2{
+  animation: spinCCW 26s linear infinite;
+}
+.spin-ring-3{
+  animation: spinCW 38s linear infinite;
+}
+.spin-ring-4{
+  animation: spinCCW 14s linear infinite;
+}
+
+@keyframes spinCW  { from{transform:rotate(0deg)}   to{transform:rotate(360deg)} }
+@keyframes spinCCW { from{transform:rotate(0deg)}   to{transform:rotate(-360deg)} }
+
+/* ─── end spinning stick rings ─── */
+
 .allah-ring{
   position:absolute;
   top:50%;
@@ -461,7 +510,7 @@ body::before{
   50%{opacity:.85; transform:translate(-50%,-50%) scale(1.03)}
 }
 
-.allah{position:relative;z-index:1;font-family:"Noto Naskh Arabic","Amiri",serif;font-size:48px;color:rgba(255,243,227,.96);text-shadow: 0 18px 46px rgba(0,0,0,.45), var(--text-glow);animation: royalText 3.6s ease-in-out infinite}
+.allah{position:relative;z-index:3;font-family:"Noto Naskh Arabic","Amiri",serif;font-size:48px;color:rgba(255,243,227,.96);text-shadow: 0 18px 46px rgba(0,0,0,.45), var(--text-glow);animation: royalText 3.6s ease-in-out infinite}
 @keyframes royalText{
   0%,100%{text-shadow: 0 18px 46px rgba(0,0,0,.45), 0 0 26px var(--royal-glow-1), 0 0 40px var(--royal-glow-2)}
   50%{text-shadow: 0 18px 46px rgba(0,0,0,.45), 0 0 36px var(--royal-glow-1), 0 0 58px var(--royal-glow-3)}
@@ -618,6 +667,10 @@ body::before{
   .card-face{transition:none}
   .chip{transition:none}
   .map-btn{transition:none}
+  .spin-ring-1,
+  .spin-ring-2,
+  .spin-ring-3,
+  .spin-ring-4{animation:none}
 }
 
 @media print{
@@ -639,4 +692,5 @@ body::before{
   }
   .card-face:last-child{break-after:auto}
   .map-btn{border-color:#999;color:#111;box-shadow:none}
+  .spin-rings-wrap{display:none}
 }
