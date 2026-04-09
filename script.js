@@ -47,7 +47,7 @@ if (btnTheme) {
   });
 }
 
-applyTheme("dark");
+applyTheme("light");
 
 function setMenuOpen(next) {
   if (!topbar || !menuToggle) return;
